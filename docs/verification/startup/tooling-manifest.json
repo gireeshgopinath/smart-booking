@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-10T10:34:14.567788+00:00",
+  "scope": "Validated startup tooling and schemas, not application artifacts",
+  "sha256": {
+    "contracts/booking-blueprint.schema.json": "75d7de54e84db276d5bbdb970ee58052864dd0803e9d5d45b8dc00fecd438dc6",
+    "contracts/local-result.schema.json": "0770a5f7aebdf4ef241bf2c798e5b70082b7374093ea34b21e97ef1913637ac5",
+    "contracts/review-result.schema.json": "2ff9204a316380242cba5efaa907683f0984981a08b88fe7da722fcc268a15c3",
+    "scripts/agent-doctor.ps1": "b8d93347ce2e93bcc9c50c01185afdcae928d7ed0288cbf2e319aa6f9a49171e",
+    "scripts/build-review-packet.ps1": "6a1069afd885980ffa63ae989c76e09a686df5d2f8edc931714ad3cd3de37365",
+    "scripts/prepare-task.ps1": "c8587b5868a76cb8212b668e318fe208aab301095dea3013835ff656b7513863",
+    "scripts/run-codex-task.ps1": "59c302da9e18c9c8bf80079bfa2ca151409a2138f720cd12992845bf04be519e",
+    "scripts/test-workflow.ps1": "a1a80d7d16e137fce70d9d656a27d4c8b2d8aaa9be8d5fcb271835539ab66e60",
+    "scripts/verify-workflow.ps1": "39741d118b9498bcda8cac56ea6b8c54eb9f82c0de008d7683e637955819da49",
+    "scripts/workflow-common.ps1": "94e08d82f0b5a71e9d62efc8bfc9ff9da9a1c81b539bab31f2dd836019112743"
+  }
+}

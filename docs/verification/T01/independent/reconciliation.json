@@ -1,0 +1,1170 @@
+{
+  "schemaVersion": 1,
+  "taskId": "T01",
+  "slice": "S01",
+  "runId": "inventory-20261010T160924955Z-5de0b316",
+  "startedAtUtc": "2026-10-10T16:09:24.9524154Z",
+  "finishedAtUtc": "2026-10-10T16:10:29.1185132Z",
+  "command": "pwsh -NoProfile -File scripts/verify/verify-T01-inventory.ps1",
+  "sourceFingerprint": "no-git-sha256:f3dd2a88409a943c9255cc278b64dd77e0ce7ad8e1067a24698342265e0364d4",
+  "environment": {
+    "powershell": "7.6.5",
+    "os": "Microsoft Windows 10.0.26200",
+    "workspace": "C:\\Users\\giree\\OneDrive\\Desktop\\booking"
+  },
+  "data": {
+    "masterTasks": [
+      {
+        "id": "T01",
+        "title": "Repository assessment and dependency baseline"
+      },
+      {
+        "id": "T02",
+        "title": "Application skeleton and contracts"
+      },
+      {
+        "id": "T03",
+        "title": "Local dependencies and secret setup"
+      },
+      {
+        "id": "T04",
+        "title": "Tenant directory, OIDC and authorization"
+      },
+      {
+        "id": "T05",
+        "title": "Persistent schema and resource invariants"
+      },
+      {
+        "id": "T06",
+        "title": "Business catalog and scheduling administration"
+      },
+      {
+        "id": "T07",
+        "title": "Availability engine"
+      },
+      {
+        "id": "T08",
+        "title": "Guest sessions, proposals and holds"
+      },
+      {
+        "id": "T09",
+        "title": "Booking confirmation, cancellation and rescheduling"
+      },
+      {
+        "id": "T10",
+        "title": "Capacity sessions and waitlists"
+      },
+      {
+        "id": "T11",
+        "title": "Events, inbox/outbox and notification delivery"
+      },
+      {
+        "id": "T12",
+        "title": "Durable booking workflows"
+      },
+      {
+        "id": "T13",
+        "title": "Dummy payment extension"
+      },
+      {
+        "id": "T14",
+        "title": "Calendar connections and conflict handling"
+      },
+      {
+        "id": "T15",
+        "title": "Reporting, audit access and retention"
+      },
+      {
+        "id": "T16",
+        "title": "Model gateway and AI execution budgets"
+      },
+      {
+        "id": "T17",
+        "title": "Booking agent and mutation authorization"
+      },
+      {
+        "id": "T18",
+        "title": "Business setup, recovery and reporting agents"
+      },
+      {
+        "id": "T19",
+        "title": "MCP and A2A interfaces"
+      },
+      {
+        "id": "T20",
+        "title": "Cell routing and migration safety"
+      },
+      {
+        "id": "T21",
+        "title": "Telemetry, admission and operational controls"
+      },
+      {
+        "id": "T22",
+        "title": "Complete Docker Compose release"
+      },
+      {
+        "id": "T23",
+        "title": "Kubernetes deployment and recovery"
+      },
+      {
+        "id": "T24",
+        "title": "Cloud infrastructure and CI delivery"
+      },
+      {
+        "id": "T25",
+        "title": "Load, resilience and restore verification"
+      },
+      {
+        "id": "T26",
+        "title": "Final independent verification and handoff"
+      },
+      {
+        "id": "T27",
+        "title": "Frontend baseline and shared design system"
+      },
+      {
+        "id": "T28",
+        "title": "Business portal and operational calendar"
+      },
+      {
+        "id": "T29",
+        "title": "Complete guest booking and self management"
+      },
+      {
+        "id": "T30",
+        "title": "Accessibility and localization verification"
+      },
+      {
+        "id": "T31",
+        "title": "Versioned blueprint persistence and semantic validation"
+      },
+      {
+        "id": "T32",
+        "title": "Booking rehearsal and live change impact"
+      },
+      {
+        "id": "T33",
+        "title": "AI builder and conversational customization UI"
+      },
+      {
+        "id": "T34",
+        "title": "Connector registry and declarative mapping"
+      },
+      {
+        "id": "T35",
+        "title": "Intent booking experience and protocol client evidence"
+      },
+      {
+        "id": "T36",
+        "title": "Portable templates and safe automation recipes"
+      },
+      {
+        "id": "T37",
+        "title": "Disruption and cancellation recovery workflow"
+      },
+      {
+        "id": "T38",
+        "title": "Explainable business insights and product measurements"
+      },
+      {
+        "id": "T39",
+        "title": "Future feature experimental contracts"
+      },
+      {
+        "id": "T40",
+        "title": "Whole application deployment and capacity measurement"
+      },
+      {
+        "id": "T41",
+        "title": "Independent full application release verification"
+      },
+      {
+        "id": "T42",
+        "title": "Handoff and pilot readiness decision"
+      }
+    ],
+    "backendTasks": [
+      {
+        "id": "T01",
+        "title": "Repository assessment and dependency baseline"
+      },
+      {
+        "id": "T02",
+        "title": "Application skeleton and contracts"
+      },
+      {
+        "id": "T03",
+        "title": "Local dependencies and secret setup"
+      },
+      {
+        "id": "T04",
+        "title": "Tenant directory, OIDC and authorization"
+      },
+      {
+        "id": "T05",
+        "title": "Persistent schema and resource invariants"
+      },
+      {
+        "id": "T06",
+        "title": "Business catalog and scheduling administration"
+      },
+      {
+        "id": "T07",
+        "title": "Availability engine"
+      },
+      {
+        "id": "T08",
+        "title": "Guest sessions, proposals and holds"
+      },
+      {
+        "id": "T09",
+        "title": "Booking confirmation, cancellation and rescheduling"
+      },
+      {
+        "id": "T10",
+        "title": "Capacity sessions and waitlists"
+      },
+      {
+        "id": "T11",
+        "title": "Events, inbox/outbox and notification delivery"
+      },
+      {
+        "id": "T12",
+        "title": "Durable booking workflows"
+      },
+      {
+        "id": "T13",
+        "title": "Dummy payment extension"
+      },
+      {
+        "id": "T14",
+        "title": "Calendar connections and conflict handling"
+      },
+      {
+        "id": "T15",
+        "title": "Reporting, audit access and retention"
+      },
+      {
+        "id": "T16",
+        "title": "Model gateway and AI execution budgets"
+      },
+      {
+        "id": "T17",
+        "title": "Booking agent and mutation authorization"
+      },
+      {
+        "id": "T18",
+        "title": "Business setup, recovery and reporting agents"
+      },
+      {
+        "id": "T19",
+        "title": "MCP and A2A interfaces"
+      },
+      {
+        "id": "T20",
+        "title": "Cell routing and migration safety"
+      },
+      {
+        "id": "T21",
+        "title": "Telemetry, admission and operational controls"
+      },
+      {
+        "id": "T22",
+        "title": "Complete Docker Compose release"
+      },
+      {
+        "id": "T23",
+        "title": "Kubernetes deployment and recovery"
+      },
+      {
+        "id": "T24",
+        "title": "Cloud infrastructure and CI delivery"
+      },
+      {
+        "id": "T25",
+        "title": "Load, resilience and restore verification"
+      },
+      {
+        "id": "T26",
+        "title": "Final independent verification and handoff"
+      }
+    ],
+    "packets": [
+      {
+        "id": "T01",
+        "title": "Repository assessment and dependency baseline",
+        "packet": "docs/features/T01.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T02",
+        "title": "Application skeleton and contracts",
+        "packet": "docs/features/T02.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T03",
+        "title": "Local dependencies and secret setup",
+        "packet": "docs/features/T03.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T04",
+        "title": "Tenant directory, OIDC and authorization",
+        "packet": "docs/features/T04.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T05",
+        "title": "Persistent schema and resource invariants",
+        "packet": "docs/features/T05.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T06",
+        "title": "Business catalog and scheduling administration",
+        "packet": "docs/features/T06.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T07",
+        "title": "Availability engine",
+        "packet": "docs/features/T07.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T08",
+        "title": "Guest sessions, proposals and holds",
+        "packet": "docs/features/T08.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T09",
+        "title": "Booking confirmation, cancellation and rescheduling",
+        "packet": "docs/features/T09.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T10",
+        "title": "Capacity sessions and waitlists",
+        "packet": "docs/features/T10.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T11",
+        "title": "Events, inbox/outbox and notification delivery",
+        "packet": "docs/features/T11.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T12",
+        "title": "Durable booking workflows",
+        "packet": "docs/features/T12.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T13",
+        "title": "Dummy payment extension",
+        "packet": "docs/features/T13.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T14",
+        "title": "Calendar connections and conflict handling",
+        "packet": "docs/features/T14.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T15",
+        "title": "Reporting, audit access and retention",
+        "packet": "docs/features/T15.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T16",
+        "title": "Model gateway and AI execution budgets",
+        "packet": "docs/features/T16.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T17",
+        "title": "Booking agent and mutation authorization",
+        "packet": "docs/features/T17.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T18",
+        "title": "Business setup, recovery and reporting agents",
+        "packet": "docs/features/T18.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T19",
+        "title": "MCP and A2A interfaces",
+        "packet": "docs/features/T19.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T20",
+        "title": "Cell routing and migration safety",
+        "packet": "docs/features/T20.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T21",
+        "title": "Telemetry, admission and operational controls",
+        "packet": "docs/features/T21.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T22",
+        "title": "Complete Docker Compose release",
+        "packet": "docs/features/T22.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T23",
+        "title": "Kubernetes deployment and recovery",
+        "packet": "docs/features/T23.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T24",
+        "title": "Cloud infrastructure and CI delivery",
+        "packet": "docs/features/T24.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T25",
+        "title": "Load, resilience and restore verification",
+        "packet": "docs/features/T25.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T26",
+        "title": "Final independent verification and handoff",
+        "packet": "docs/features/T26.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T27",
+        "title": "Frontend baseline and shared design system",
+        "packet": "docs/features/T27.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T28",
+        "title": "Business portal and operational calendar",
+        "packet": "docs/features/T28.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T29",
+        "title": "Complete guest booking and self management",
+        "packet": "docs/features/T29.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T30",
+        "title": "Accessibility and localization verification",
+        "packet": "docs/features/T30.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T31",
+        "title": "Versioned blueprint persistence and semantic validation",
+        "packet": "docs/features/T31.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T32",
+        "title": "Booking rehearsal and live change impact",
+        "packet": "docs/features/T32.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T33",
+        "title": "AI builder and conversational customization UI",
+        "packet": "docs/features/T33.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T34",
+        "title": "Connector registry and declarative mapping",
+        "packet": "docs/features/T34.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T35",
+        "title": "Intent booking experience and protocol client evidence",
+        "packet": "docs/features/T35.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T36",
+        "title": "Portable templates and safe automation recipes",
+        "packet": "docs/features/T36.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T37",
+        "title": "Disruption and cancellation recovery workflow",
+        "packet": "docs/features/T37.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T38",
+        "title": "Explainable business insights and product measurements",
+        "packet": "docs/features/T38.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T39",
+        "title": "Future feature experimental contracts",
+        "packet": "docs/features/T39.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T40",
+        "title": "Whole application deployment and capacity measurement",
+        "packet": "docs/features/T40.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T41",
+        "title": "Independent full application release verification",
+        "packet": "docs/features/T41.md",
+        "packetHeadingMatches": true
+      },
+      {
+        "id": "T42",
+        "title": "Handoff and pilot readiness decision",
+        "packet": "docs/features/T42.md",
+        "packetHeadingMatches": true
+      }
+    ],
+    "adoptedReplacements": [
+      {
+        "referencedSupport": "00_START_HERE.md",
+        "replacement": "README.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "product specification",
+        "replacement": "docs/DEVELOPMENT_GOAL.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "architecture specification",
+        "replacement": "docs/architecture/SYSTEM_DESIGN.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "data specification",
+        "replacement": "docs/architecture/DOMAIN_CONTRACT.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "AI specification",
+        "replacement": "docs/architecture/BLUEPRINT_CONTRACT.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "08_MASTER_EXECUTION_PLAN.md",
+        "replacement": "Booking_Application_Master_Execution_Plan.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "09_LOCAL_AI_AND_CHATGPT_GUIDE.md",
+        "replacement": "docs/LOCAL_AI_AND_CODEX_GUIDE.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "10_VERIFICATION_AND_TRACEABILITY.md",
+        "replacement": "docs/verification/VERIFICATION_MATRIX.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "review templates",
+        "replacement": "docs/execution/templates/review-packet.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "starter blueprint schema",
+        "replacement": "contracts/booking-blueprint.schema.json",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "synthetic salon template",
+        "replacement": "examples/salon.blueprint.json",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      },
+      {
+        "referencedSupport": "twelve original ADRs",
+        "replacement": "docs/architecture/adr/README.md",
+        "exists": true,
+        "provenance": "adopted replacement documented in docs/PLAN_ANALYSIS.md; not originally supplied"
+      }
+    ],
+    "provenanceAuthority": "docs/PLAN_ANALYSIS.md",
+    "docx": {
+      "method": "word/document.xml directly from OOXML ZIP, top-level paragraphs and table rows/cells",
+      "paragraphs": [
+        "Booking Application Design and Development",
+        "Application specification and local AI development guide",
+        "Version 2.0  |  9 October 2026  |  Prepared for Gireesh Gopinath",
+        "Build decision",
+        "Build a guest booking platform that businesses can configure through a visual portal or an AI builder. Customers reserve and manage appointments without registering. The backend enforces capacity and policy; AI prepares suggestions and configuration drafts; customers and owners approve exact changes.",
+        "This document provides the application design and development route. The accompanying pack contains detailed requirements, API and data contracts, 42 implementation tasks, prompts, review templates and a portable blueprint schema. Application implementation and operational verification follow those tasks.",
+        "Scope carried forward",
+        "Guest website and authenticated business portal with staff, resources, appointments and capacity sessions.",
+        "AI-generated business blueprints, conversational changes, page composition, rehearsal and live change-impact previews.",
+        "Controlled agents, calendar and communication integrations, portable templates and operational recovery.",
+        "Cell-based scaling, Compose and Kubernetes deployment, CI and recovery evidence.",
+        "Dummy payment demonstration only with no card collection or money movement.",
+        "How to use the pack",
+        "Read 00_START_HERE.md, then the product, architecture and data specifications. Use 08_MASTER_EXECUTION_PLAN.md to select one dependency-ready task. Use 09_LOCAL_AI_AND_CHATGPT_GUIDE.md to run your local coding model and send ChatGPT a review packet. Begin with T01 and complete a reliable guest booking slice before adding the AI builder.",
+        "",
+        "2 Product scope and releases",
+        "Pilot one low-sensitivity local-service segment in one launch market. A salon-like business provides the appointment use case; a synthetic class provider validates capacity. Staff authenticate, while customers use narrowly scoped guest capabilities. The initial application is provider software with shared links, not a cross-business marketplace.",
+        "",
+        "Use cases",
+        "A customer books a haircut from a QR code without a password. A class operator allocates three of twelve seats. A rental reserves an asset and staff member together. A manager records a phone appointment using the same rules. An owner describes business hours and services, confirms inferred values and publishes a rehearsed blueprint. A staff absence produces approved replacement options rather than silent schedule changes.",
+        "Success measures",
+        "Proposed pilot targets are a standard booking median under 60 seconds, zero confirmed capacity violations and at least 90 percent successful completion across ten moderated synthetic tasks. Measure setup time, funnel abandonment, support contacts, occupancy, cancellations, recovered places and notification delays. These are planning targets, not results already achieved.",
+        "Commercial validation",
+        "Test whether verified setup and recovery reduce owner work and improve customer completion. Interview pilot businesses and measure retained use before selecting subscription pricing. Track infrastructure, inference and messaging cost per active tenant. Real subscription billing is outside this implementation.",
+        "",
+        "3 Customer and business experience",
+        "Guest booking",
+        "The primary flow is service, live time, contact details, review and confirmation. Display duration, location, local time zone, party size, price and cancellation policy before the final action. One reachable contact channel is sufficient; optional business verification does not create a customer account.",
+        "",
+        "Generate the idempotency key before a mutation. If the response is lost, query operation status before trying a new command. An expired hold or stale slot preserves contact input and offers alternatives. Do not silently queue bookings while offline.",
+        "Business portal",
+        "Provide location-aware calendar and booking lists, manual booking, service/resource/schedule configuration, pending approvals, attendance, integrations, insights and audit. Role restrictions apply to server APIs. Dragging an appointment opens an approved reschedule flow and never bypasses allocation constraints.",
+        "Builder experience",
+        "Describe the business, review extracted and inferred facts, resolve missing material values, preview the page, rehearse bookings, inspect affected appointments and approve the exact draft. Conversational edits show a before-and-after diff. Rollback creates another validated configuration version and preserves appointment history.",
+        "Accessibility",
+        "Target WCAG 2.2 AA. Verify 360-pixel mobile screens, keyboard navigation, focus, screen-reader errors, contrast and reduced motion. AI remains optional. Dates follow locale presentation with an explicit location time zone. Choose launch languages during the pilot.",
+        "",
+        "4 Architecture and platform decisions",
+        "Use a modular Java 25 and stable Spring Boot 4.x core per tenant cell. Pin compatible versions after a dependency trial. Deploy routing, booking API, AI runtime and background workers separately for fault and resource isolation. The frontend uses React and TypeScript with a shared accessible component system.",
+        "",
+        "Cell growth and single writer",
+        "Begin with one cell and verify two locally. The directory assigns a home cell and route epoch. Cell commands enforce a writer fence independently of cached routing. Migration pauses writes, drains commands, fences the source, copies and reconciles tenant state, then activates only the destination. Include pending jobs, approvals, guest capabilities and idempotency records.",
+        "Consistency boundaries",
+        "PostgreSQL is the final inventory authority. Static catalogue can be cached; availability cache and replicas only suggest slots. Commit booking state and outbox events together. Transport is at least once, with durable inbox deduplication. Multi-resource transactions remain within one tenant cell; cross-cell atomic scheduling is excluded.",
+        "The detailed Markdown architecture includes Mermaid topology and twelve decision records. Keep separate network services for independent resource usage rather than every domain noun.",
+        "",
+        "5 Data model and booking correctness",
+        "Core records",
+        "Tenant directory, memberships, services, resources, schedules, exceptions, guest grants, proposals, approvals, holds, bookings, allocations, capacity sessions, idempotency operations, inbox/outbox, notifications, waitlists, calendar cursors, blueprints, impact reports, agent runs and simulated intents form the data model. Tenant-owned relationships use tenant-aware keys.",
+        "Reservation transaction",
+        "Resolve caller and tenant, validate the canonical request and claim the durable idempotency key.",
+        "Lock scheduling guard rows and capacity session rows in a stable order. Recheck current versions and authoritative database time after obtaining locks.",
+        "Expire relevant old holds under the same locks. A stopped sweep worker cannot make an expired hold valid.",
+        "Use half-open occupied intervals including buffers and an active-row PostgreSQL exclusion constraint for exclusive resources.",
+        "Conditionally reserve capacity for the whole party. Holds count against capacity; conversion to confirmed keeps the same allocation.",
+        "Validate exact caller approval, persist booking and outbox, save operation result and return success only after commit.",
+        "Rescheduling reserves the new allocation and releases the old one inside a transaction. A failed move preserves the original appointment. Multi-resource booking is all or none. Duplicate release cannot decrement capacity twice. A reused idempotency key with a changed payload returns a conflict.",
+        "Time and state",
+        "Store UTC instants, location IANA zones and accepted policy snapshots. Recurring hours are interpreted locally. Explicitly resolve ambiguous or nonexistent daylight-saving times. Holds become consumed, expired or released. Pending verification/approval consumes capacity only until a declared deadline. Cancellation, completion and no-show follow legal guarded transitions.",
+        "Guest and staff security",
+        "Guests hold hashed, random, scoped capabilities; object IDs and references are not credentials. Management links exchange a fragment token into a scoped session. Staff require verified OIDC and active membership. Runtime database roles cannot bypass row security; pooled transaction context must not leak between tenants.",
+        "",
+        "6 Intelligent blueprints and controlled agents",
+        "Builder pipeline",
+        "Extract authorized business facts, record supplied/inferred/unresolved provenance, clarify material gaps, create a typed draft, validate structure and semantics, compose trusted page components, rehearse bookings, compute current impact and obtain exact owner approval before publication. AI produces configuration data rather than executable page code.",
+        "The included starter schema and synthetic salon example establish portable service/resource/schedule keys and policy settings. Implement complete provenance, reference checks, schema migration and publication rules in T31. Import always creates a server-owned draft; a supplied status cannot authorize publication.",
+        "Rehearsal and impact",
+        "Rehearsal runs shared scheduler code against isolated synthetic data and cannot message real customers. Cover holidays, buffers, last-seat contention, expiry, multiple resources and daylight saving. Impact reports bind a draft hash to current configuration and affected booking versions. New conflicting appointments invalidate an old preview. Existing reservations remain valid until separately approved moves succeed.",
+        "",
+        "Server control",
+        "Approval is a server-issued, scoped, expiring record bound to exact proposal hash and version. A model statement cannot approve itself. Tools receive trusted caller/tenant context, not model-provided authority. There are no arbitrary SQL, shell or infrastructure tools. Activities perform inference; durable workflow logic remains deterministic.",
+        "Bound inference and tool calls, deadlines, token use and queue length. On model timeout, expose manual booking. Evaluate intent extraction separately from unauthorized actions. Any forged approval, tenant leakage or invented confirmation blocks release.",
+        "",
+        "7 Integration and customization design",
+        "Connector lifecycle",
+        "Use a registry with typed capabilities, configuration, scopes, field mappings, connection test, health and revocation. Owners approve permissions and preview synthetic mappings. AI may suggest a mapping but cannot grant consent. Store credentials outside blueprint exports and model context.",
+        "",
+        "Calendar behavior",
+        "Import external busy events with provider mapping and incremental cursors. Use Google sync tokens and Microsoft calendar-view delta links with their query scopes. Reconcile missed notifications and prevent exported-event echo loops. External edits create a staff-visible conflict rather than silently moving a guest booking. Stale mandatory calendars restrict affected new inventory by policy.",
+        "An external event can conflict immediately after synchronization. Local booking transactions cannot make external calendar writes atomic; detect and reconcile that boundary explicitly.",
+        "Safe customization",
+        "Offer branding, rules, low-sensitivity forms, declarative automation recipes and reviewed connector adapters. Page components and transformation functions come from trusted registries. Portable blueprints reference logical resources and integrations without credentials or customer records. Import and rollback require fresh validation and impact review.",
+        "Simulator rules",
+        "All simulated intents, receipts and reports say SIMULATED NO MONEY MOVED. Scenario controls are operator-only in local/demo profiles. Test success, decline, timeout, duplicate, reordered, invalid and late callbacks. Late simulated success cannot take another guest slot; record a compensating simulated refund. No real gateway SDK, card fields or financial credentials exist.",
+        "",
+        "8 Deployment scale and recovery",
+        "Compose provides real local PostgreSQL, cache, OIDC, queues, workflows, mail inbox and application services. Verify the same immutable images in a dedicated booking-dev kind cluster. Cloud templates cover private AWS dependencies, EKS, secrets, workload identity, TLS and backup; actual paid provisioning requires a selected authorized target.",
+        "",
+        "A million concurrent browsers making one request every thirty seconds implies about 33,333 requests per second before bursts or AI. That is a separate tier. Twenty agent starts per second with three model calls creates sixty inference requests per second. At two thousand input tokens per call, input load is 7.2 million tokens per minute before output. Local GPU development does not establish that capacity.",
+        "Measurement and operations",
+        "Declare dataset, tenant skew, duration, offered/achieved rates and load generator limits. Separate expected inventory conflicts from errors. Planning objectives are server p95 below 500 ms for availability and below one second for mutations, with zero capacity violations and bounded queues. Monthly 99.9 percent core availability needs operational evidence beyond a load test.",
+        "Use API pool limits, fair tenant admission, HPA/KEDA and independent AI quotas. Observe outbox/queue age, database wait, calendar freshness and model latency. Run isolated backup/restore and rollout drills. Proposed recovery objectives are RPO at most five minutes and RTO at most sixty minutes, subject to actual tests. Helm rollback does not reverse database migrations.",
+        "",
+        "9 Implementation milestones and evidence",
+        "The master plan contains 42 dependency-linked tasks. It preserves the original backend T01–T26 definitions and adds the complete application scope. T26 verifies the backend; T42 hands off the whole application. All tasks begin TODO. Execute one bounded task at a time with real tests and review evidence.",
+        "",
+        "Evidence contract",
+        "For each task record dependencies, changed files, source revision, commands, actual exit codes, timestamps, evidence paths and limitations. PASS means acceptance criteria were run and met. FAIL and BLOCKED remain visible. Do not turn contract tests into live integration claims or mark unavailable external gates passed.",
+        "Suggested first slice",
+        "Establish the baseline, then tenant authorization and database invariants. Add catalogue and availability, scoped holds and idempotent confirmation. Prove the last-seat race before building the guest UI. Use that complete journey as the first major checkpoint. The AI builder extends a reliable scheduler, not a mocked booking path.",
+        "Task count is not a time estimate. Estimate after the foundation and first slice using actual local-model repair rate. The task JSON is navigation metadata; full task prose contains the implementation and acceptance requirements.",
+        "",
+        "10 Local model work with ChatGPT guidance",
+        "Use your local coding model for implementation and tests; use ChatGPT for design decisions, difficult defects and focused review. ChatGPT does not automatically see or supervise your local repository. Send a review packet and relevant patch/source. Product AI inside the finished application is a separate system.",
+        "Local setup",
+        "Check actual GPU memory, quantization, context and tool behavior on your RTX 5080 machine. Load a working coding model in LM Studio, start its localhost server and copy the exact served model ID. The official Codex CLI supports local LM Studio or Ollama providers. Test the installed CLI and model together before project work.",
+        "Invoke-RestMethod -Uri 'http://127.0.0.1:1234/v1/models'codex --versioncodex --help",
+        "codex --oss --local-provider lmstudio `  --model 'YOUR_EXACT_SERVED_MODEL_ID' `  --sandbox workspace-write",
+        "In WSL, verify endpoint reachability from the agent environment; Windows and WSL localhost behavior can differ. Keep inference private. vLLM is an alternative only with a compatible GPU/checkpoint and tested parser/template. API compatibility alone does not prove coding-agent tool compatibility.",
+        "Capability trial",
+        "In a temporary repository, ask the agent to read a file, change one function, write an independent behavior test, run it and inspect the actual diff. Verify honest failures and bounded repair. If tools fail, use reviewed patch mode rather than autonomous implementation.",
+        "Task review cycle",
+        "Start T01 using the ready prompt and relevant specifications.",
+        "Local agent implements one task, runs checks and records evidence.",
+        "Share a redacted review packet, diff and relevant code with ChatGPT.",
+        "Apply concrete review fixes, rerun affected checks and checkpoint.",
+        "Resume from ledger and next-step rather than restarting the project.",
+        "After two attempts at the same failing root cause, save a minimal diagnostic packet and request a focused diagnosis. Never skip assertions, relax tenant constraints or fabricate successful output.",
+        "",
+        "11 Release verification and security",
+        "Keep the original 26 backend gates and add 20 full-application gates. Verification uses distinct tenants/guests, real PostgreSQL, actual browser journeys and local services. Test the final revision and image versions, not a previous build.",
+        "",
+        "Independent readiness labels",
+        "Report backend, frontend E2E, Compose, local Kubernetes, AI contracts, live local model, blueprint builder, MCP/A2A, live external calendars, cloud templates, cloud deployment, scale and experimental features separately. A calendar fixture is not a live-account test; Terraform validation is not a deployment; local throughput is not proof of a million-user service.",
+        "Threat controls",
+        "Scope and hash guest capabilities, verify business identity and membership, enforce CSRF/CORS, limit holds and recovery attempts, redact secrets and use runtime database roles without RLS bypass. Imported text and model output cannot acquire authority. Use typed tools and trusted components. Validate webhook destinations and block private-address egress. Fence stale writers during migration.",
+        "Completion statement",
+        "Local P0/P1 acceptance requires every mandatory available gate to pass. Missing external account or large-scale evidence remains explicit. Experimental voice, demand advice and multi-stage work stay flagged with their actual prototype status. The design pack specifies these checks; application behavior will be verified during development.",
+        "",
+        "12 References and next development step",
+        "Project decisions",
+        "This design consolidates the 28 September guest-booking requirements and backend execution plan with the later intelligent-blueprint discussion. It extends the earlier backend-only scope to the guest website and business portal. The later dummy-only payment constraint governs this version. The full original backend plan remains in the appendix.",
+        "Primary implementation references",
+        "Spring Boot compatibility: docs.spring.io/spring-boot/system-requirements.html",
+        "Codex local providers: developers.openai.com/codex/config-file/config-advanced",
+        "Codex commands: developers.openai.com/codex/developer-commands",
+        "LM Studio APIs: lmstudio.ai/docs/developer/openai-compat",
+        "vLLM server: docs.vllm.ai/en/latest/serving/online_serving/openai_compatible_server/",
+        "PostgreSQL ranges: postgresql.org/docs/current/rangetypes.html",
+        "Google Calendar sync: developers.google.com/workspace/calendar/api/guides/sync",
+        "Microsoft calendar delta: learn.microsoft.com/en-us/graph/delta-query-events",
+        "Accessibility: w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+        "Technical references were checked on 9 October 2026. Pin actual compatible versions in T01. Performance, recovery and model budgets are engineering targets; pilot geography, live channel accounts, production identity and cloud budget are still business decisions before launch.",
+        "Start development",
+        "Extract the pack into booking-platform. Reconcile AGENTS.md with existing repository instructions. Start the local model and capability trial, then execute T01 only. Establish wrappers, versions, contracts, task ledger and a baseline check. Share the T01 review packet and relevant diff with ChatGPT before taking on high-risk backend work.",
+        "The detailed execution plan provides the next dependency-ready task after each checkpoint. Keep one active writer, record real evidence and use the review/repair/continuation prompts to preserve progress across local model sessions."
+      ],
+      "tables": [
+        {
+          "rows": [
+            {
+              "cells": [
+                "Release",
+                "Capabilities",
+                "Acceptance"
+              ]
+            },
+            {
+              "cells": [
+                "P0 core",
+                "Guest booking; staff/resources; capacity; holds; management; reminders; portal; simulator",
+                "Real database and browser flows pass without AI"
+              ]
+            },
+            {
+              "cells": [
+                "P1 AI pilot",
+                "Intent search; builder; conversational edits; trusted page preview; rehearsal; impact; portable drafts",
+                "Exact approval and current inventory checks"
+              ]
+            },
+            {
+              "cells": [
+                "P2 growth",
+                "Connected accounts; recovery; automation; explainable insights; measured cells",
+                "Provider and operational evidence separated"
+              ]
+            },
+            {
+              "cells": [
+                "P3 future",
+                "Multi-stage visits; voice/message ports; demand/duration advice",
+                "Off by default with separate readiness"
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "cells": [
+                "Screen",
+                "Required behavior"
+              ]
+            },
+            {
+              "cells": [
+                "Service and time",
+                "Mobile list/calendar, next available, staff and party filters"
+              ]
+            },
+            {
+              "cells": [
+                "Contact and review",
+                "Minimal fields, retained input, exact proposal and hold expiry"
+              ]
+            },
+            {
+              "cells": [
+                "Confirmation",
+                "Persisted reference, status, calendar file and management action"
+              ]
+            },
+            {
+              "cells": [
+                "Manage booking",
+                "Scoped token exchange, policy-aware cancel/move and recovery"
+              ]
+            },
+            {
+              "cells": [
+                "AI entry",
+                "Optional intent input, real slot cards and manual fallback"
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "cells": [
+                "Component",
+                "Responsibility"
+              ]
+            },
+            {
+              "cells": [
+                "Guest and business web",
+                "Anonymous booking and authenticated operations"
+              ]
+            },
+            {
+              "cells": [
+                "Edge and tenant directory",
+                "Public delivery, quotas, tenant routing and route epochs"
+              ]
+            },
+            {
+              "cells": [
+                "Booking cell",
+                "Catalogue, schedules, allocations, reservations and audit"
+              ]
+            },
+            {
+              "cells": [
+                "PostgreSQL",
+                "Writer authority, tenant isolation, constraints and outbox"
+              ]
+            },
+            {
+              "cells": [
+                "Valkey",
+                "Advisory cache and bounded distributed quotas"
+              ]
+            },
+            {
+              "cells": [
+                "SQS and workers",
+                "Notifications, projections and connector retries"
+              ]
+            },
+            {
+              "cells": [
+                "Temporal",
+                "Durable waiting, approvals and recovery workflows"
+              ]
+            },
+            {
+              "cells": [
+                "AI and tool gateway",
+                "Structured interpretation and authorized domain tools"
+              ]
+            },
+            {
+              "cells": [
+                "Dummy simulator",
+                "Clearly labelled future payment extension"
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "cells": [
+                "Agent",
+                "Permitted work",
+                "Approval"
+              ]
+            },
+            {
+              "cells": [
+                "Booking",
+                "Search and prepare exact proposals",
+                "Guest approves mutation"
+              ]
+            },
+            {
+              "cells": [
+                "Builder",
+                "Draft, validate, rehearse and preview",
+                "Owner approves publication"
+              ]
+            },
+            {
+              "cells": [
+                "Recovery",
+                "Suggest replacement and outreach",
+                "Staff and guest boundaries"
+              ]
+            },
+            {
+              "cells": [
+                "Insights",
+                "Named bounded metric queries",
+                "Advice cannot change rules"
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "cells": [
+                "Integration",
+                "Initial implementation"
+              ]
+            },
+            {
+              "cells": [
+                "Email and SMS",
+                "SMTP plus local inbox; SMS sink and provider port"
+              ]
+            },
+            {
+              "cells": [
+                "Calendar",
+                "ICS plus Google/Microsoft adapters and contract tests"
+              ]
+            },
+            {
+              "cells": [
+                "CRM and automation",
+                "Signed webhooks, typed mappings and demo sink"
+              ]
+            },
+            {
+              "cells": [
+                "Messaging and voice",
+                "Flagged intake ports and synthetic contracts"
+              ]
+            },
+            {
+              "cells": [
+                "External assistants",
+                "Scoped MCP/A2A text interfaces"
+              ]
+            },
+            {
+              "cells": [
+                "Payment",
+                "Dummy simulator only"
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "cells": [
+                "Planning dimension",
+                "Target"
+              ]
+            },
+            {
+              "cells": [
+                "Monthly unique customers",
+                "1,000,000"
+              ]
+            },
+            {
+              "cells": [
+                "Concurrent browsing sessions",
+                "10,000"
+              ]
+            },
+            {
+              "cells": [
+                "Peak catalogue and availability",
+                "5,000 requests per second"
+              ]
+            },
+            {
+              "cells": [
+                "Peak mutations",
+                "200 requests per second"
+              ]
+            },
+            {
+              "cells": [
+                "New AI conversations",
+                "20 per second"
+              ]
+            },
+            {
+              "cells": [
+                "Derived AI concurrency at 30 seconds",
+                "600 active conversations"
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "cells": [
+                "Milestone",
+                "Tasks",
+                "Result"
+              ]
+            },
+            {
+              "cells": [
+                "Foundation",
+                "T01–T05",
+                "Versions, contracts, local services, identity and invariants"
+              ]
+            },
+            {
+              "cells": [
+                "Booking core",
+                "T06–T13",
+                "Availability, guests, lifecycle, events, workflows and simulator"
+              ]
+            },
+            {
+              "cells": [
+                "Backend agents",
+                "T14–T19",
+                "Calendars, audit, model tools and protocols"
+              ]
+            },
+            {
+              "cells": [
+                "Backend operations",
+                "T20–T26",
+                "Cells, telemetry, deployments, load and recovery"
+              ]
+            },
+            {
+              "cells": [
+                "Web experience",
+                "T27–T30",
+                "Guest/business websites and accessibility"
+              ]
+            },
+            {
+              "cells": [
+                "Intelligent setup",
+                "T31–T36",
+                "Blueprints, rehearsal, impact, builder and connectors"
+              ]
+            },
+            {
+              "cells": [
+                "Operational growth",
+                "T37–T40",
+                "Recovery, insights, experiments and full deployment"
+              ]
+            },
+            {
+              "cells": [
+                "Release handoff",
+                "T41–T42",
+                "Independent gates and reproducible readiness report"
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "cells": [
+                "Area",
+                "Release blockers"
+              ]
+            },
+            {
+              "cells": [
+                "Booking",
+                "Exclusive/capacity races, expiry, retry, atomic failed move, DST"
+              ]
+            },
+            {
+              "cells": [
+                "Authorization",
+                "Cross-tenant reads, guest ownership, RLS pool context, revoked staff"
+              ]
+            },
+            {
+              "cells": [
+                "AI and builder",
+                "Forged approval, prompt injection, unresolved material fields, stale impact"
+              ]
+            },
+            {
+              "cells": [
+                "Web and connectors",
+                "CSRF, token handling, keyboard/mobile access, webhook SSRF, echo loops"
+              ]
+            },
+            {
+              "cells": [
+                "Operations",
+                "Outbox replay, workflow restart, source fencing, rollout and restore"
+              ]
+            },
+            {
+              "cells": [
+                "Evidence",
+                "False PASS, hidden real payment path or unsupported capacity claim"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unrecoveredDefinitions": [
+      "original R01-R30 definitions",
+      "original twelve ADR contents"
+    ],
+    "problems": [
+      "Preexisting generated artifact changed: docs/verification/T01/negatives/D-wrapper-checksum-mismatch.log",
+      "Preexisting generated artifact changed during verification: docs/verification/T01/negatives/D-wrapper-checksum-mismatch.log"
+    ]
+  }
+}

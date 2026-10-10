@@ -1,0 +1,14 @@
+{
+  "valid": true,
+  "taskCount": 42,
+  "graph": "ACYCLIC",
+  "specs": "ALL_EXIST",
+  "ledger": "CONSISTENT",
+  "scripts": "PARSE_OK",
+  "documentationLinks": 493,
+  "dependencyReady": [
+    "T01"
+  ],
+  "applicationImplemented": false,
+  "note": "This check validates planning/workflow artifacts only. Runtime and feature acceptance are separate."
+}

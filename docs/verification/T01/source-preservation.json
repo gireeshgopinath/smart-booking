@@ -1,0 +1,57 @@
+﻿{
+    "recordedAtUtc":  "2026-10-10T17:23:22.3389435Z",
+    "results":  [
+                    {
+                        "path":  "scripts/workflow-common.ps1",
+                        "status":  "DIFFER"
+                    },
+                    {
+                        "path":  "contracts/local-result.schema.json",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "contracts/review-result.schema.json",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "Booking_Backend_Local_Agent_Execution_Plan.md",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "scripts/run-codex-task.ps1",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "scripts/verify-workflow.ps1",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "scripts/agent-doctor.ps1",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "contracts/booking-blueprint.schema.json",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "scripts/build-review-packet.ps1",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "scripts/prepare-task.ps1",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "Booking_Application_Master_Execution_Plan.md",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "scripts/test-workflow.ps1",
+                        "status":  "MATCH"
+                    },
+                    {
+                        "path":  "Booking_Application_Design_and_Development.docx",
+                        "status":  "MATCH"
+                    }
+                ]
+}

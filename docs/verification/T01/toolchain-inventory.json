@@ -1,0 +1,45 @@
+﻿{
+    "recordedAtUtc":  "2026-10-10T17:20:53.6021192Z",
+    "workspace":  "C:\\Users\\giree\\OneDrive\\Desktop\\booking",
+    "gitRepository":  {
+                          "present":  false,
+                          "note":  "no .git directory; git commands fail with not a git repository"
+                      },
+    "commandsOnPath":  {
+                           "javac":  "C:\\Users\\giree\\AppData\\Local\\java\\jdk-25.0.4.1+1\\bin\\javac.exe",
+                           "java":  "C:\\Users\\giree\\AppData\\Local\\java\\jdk-25.0.4.1+1\\bin\\java.exe",
+                           "mvn":  "MISSING",
+                           "node":  "C:\\Program Files\\nodejs\\node.exe",
+                           "python":  "C:\\Users\\giree\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+                           "git":  "C:\\Program Files\\Git\\cmd\\git.exe",
+                           "docker":  "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe",
+                           "ollama":  "C:\\Users\\giree\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+                           "codex":  "C:\\Users\\giree\\AppData\\Roaming\\npm\\codex.ps1",
+                           "npm":  "C:\\Program Files\\nodejs\\npm.ps1"
+                       },
+    "javaVersionLine":  "java.exe : openjdk version \"25.0.4.1\" 2026-08-18 LTS",
+    "mavenVersionLines":  [
+                              "\u0027mvn\u0027 is not recognized as an internal or external command,",
+                              "operable program or batch file."
+                          ],
+    "docker":  {
+                   "serverVersion":  "29.8.0",
+                   "clientVersion":  "29.8.0",
+                   "exitCode":  0,
+                   "noteAtPriorAssessment":  "engine unreachable at startup-pack assessment (Linux engine pipe missing); reachable now"
+               },
+    "localhostPorts":  {
+                           "5432":  "closed",
+                           "3025":  "closed",
+                           "4000":  "closed",
+                           "6379":  "closed",
+                           "11434":  "LISTENING",
+                           "1234":  "LISTENING",
+                           "8080":  "closed",
+                           "7233":  "closed"
+                       },
+    "userEnvironment":  {
+                            "User JAVA_HOME":  "C:\\Users\\giree\\AppData\\Local\\java\\jdk-25.0.4.1+1",
+                            "User PATH":  "C:\\Users\\giree\\.unsloth\\studio\\unsloth_studio\\Scripts;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.0\\bin;C:\\Users\\giree\\AppData\\Local\\Programs\\Python\\Python312;C:\\Users\\giree\\AppData\\Local\\Programs\\Python\\Python312\\Scripts;C:\\Users\\giree\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\;C:\\Users\\giree\\AppData\\Local\\Programs\\Python\\Python312\\;C:\\Users\\giree\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\giree\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\giree\\AppData\\Roaming\\npm;C:\\Users\\giree\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\giree\\.lmstudio\\bin;C:\\Users\\giree\\AppData\\Local\\Microsoft\\WinGet\\Links;C:\\Users\\giree\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\giree\\AppData\\Local\\Programs\\Antigravity IDE\\bin;C:\\Users\\giree\\AppData\\Local\\Programs\\Ollama;C:\\Users\\giree\\.local\\bin;C:\\Program Files\\GitHub CLI;C:\\Users\\giree\\AppData\\Local\\java\\jdk-25.0.4.1+1\\bin"
+                        }
+}

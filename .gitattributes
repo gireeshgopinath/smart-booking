@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.docx binary
+
+# Preserve the supplied documents exactly for SHA-256 provenance checks.
+Booking_Application_Master_Execution_Plan.md -text
+Booking_Backend_Local_Agent_Execution_Plan.md -text

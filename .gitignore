@@ -1,0 +1,39 @@
+# Development secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# Application build outputs
+**/target/
+**/node_modules/
+**/dist/
+**/build/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+
+# Private raw agent sessions and isolated capability trial
+docs/execution/runs/
+.local-ai-trial/
+.workflow-test-fixtures/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.tools/
+
+# Local dependency caches and disposable verification copies
+**/.m2/
+**/.gradle/
+docs/verification/T01/session-s01-*/
+docs/verification/T01/negatives/
+docs/verification/T01/inventory-runs/
+docs/verification/T01/independent/inventory.json
+.t01-*.json
+.t01-*.txt

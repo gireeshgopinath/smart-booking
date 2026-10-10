@@ -1,0 +1,8 @@
+{
+  "taskId": "T01",
+  "dependencyReady": true,
+  "promptCharacters": 15164,
+  "writesFiles": false,
+  "specPath": "docs/features/T01.md",
+  "nextCommand": ".\\scripts\\run-codex-task.ps1 -TaskId T01 -Role Local -Provider lmstudio -Model '<exact-installed-model-id>' -DryRun"
+}

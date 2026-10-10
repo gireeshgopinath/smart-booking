@@ -1,0 +1,68 @@
+{
+  "readOnly": true,
+  "observedAtUtc": "2026-10-10T10:28:55.2320031Z",
+  "powershell": "7.6.5",
+  "checks": [
+    {
+      "name": "codex",
+      "state": "FOUND",
+      "path": "C:\\Users\\giree\\AppData\\Roaming\\npm\\codex.ps1"
+    },
+    {
+      "name": "git",
+      "state": "FOUND",
+      "path": "C:\\Program Files\\Git\\cmd\\git.exe"
+    },
+    {
+      "name": "java",
+      "state": "MISSING",
+      "path": null
+    },
+    {
+      "name": "docker",
+      "state": "FOUND",
+      "path": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+    },
+    {
+      "name": "ollama",
+      "state": "FOUND",
+      "path": "C:\\Users\\giree\\AppData\\Local\\Programs\\Ollama\\ollama.exe"
+    },
+    {
+      "name": "codex-flags",
+      "state": "OK",
+      "detail": "codex-cli 0.162.1"
+    },
+    {
+      "name": "docker-engine",
+      "state": "STOPPED_OR_UNREACHABLE",
+      "detail": "failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified."
+    },
+    {
+      "name": "ollama",
+      "state": "UNREACHABLE_OR_OVERRIDE",
+      "detail": "No connection could be made because the target machine actively refused it. (127.0.0.1:11434)"
+    },
+    {
+      "name": "lmstudio",
+      "state": "REACHABLE",
+      "detail": {
+        "provider": "lmstudio",
+        "inventoryEndpoint": "http://127.0.0.1:1234/v1/models",
+        "models": [
+          "qwen3.8-flash-next",
+          "qwen3.8-27b",
+          "text-embedding-nomic-embed-text-v1.5"
+        ],
+        "toolCompatibility": "NOT_VERIFIED"
+      }
+    },
+    {
+      "name": "workflow",
+      "state": "FOUND",
+      "tasks": 42,
+      "ledgerTasks": 42
+    }
+  ],
+  "nextStep": "Choose an exact installed model ID. Reachability is not a tool-use compatibility test. Install JDK/start Docker before runtime-dependent tasks. No packages, models, services, or configuration were changed."
+}

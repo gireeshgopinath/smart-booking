@@ -1,0 +1,21 @@
+{
+  "reviewedOn": "2026-10-10",
+  "sources": [
+    {
+      "path": "Booking_Application_Master_Execution_Plan.md",
+      "bytes": 46266,
+      "sha256": "b44eb6715ddad112056b3c5b3710f6e99bcbb3743211b3e8d234851ae525e258"
+    },
+    {
+      "path": "Booking_Backend_Local_Agent_Execution_Plan.md",
+      "bytes": 60738,
+      "sha256": "28e9b5addbb66fad2f68dcd94714160f88d404fcfbb49a2b15683fd476b92956"
+    },
+    {
+      "path": "Booking_Application_Design_and_Development.docx",
+      "bytes": 50750,
+      "sha256": "a01d73e5a28ec5840a2ee81830fc83f829cd118fe9826a71de2d01c4da2385dc"
+    }
+  ],
+  "extraction": "design-document-extracted.txt contains text only; paragraph/table formatting is not preserved."
+}

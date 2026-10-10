@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "business": {
+    "displayName": "Synthetic Studio",
+    "description": "Synthetic salon fixture for local development; no real business or customer records.",
+    "defaultLocale": "en",
+    "supportedLocales": ["en", "de"]
+  },
+  "locations": [{ "key": "studio", "name": "Demo studio", "timeZone": "Europe/Berlin", "publicAddress": "Synthetic local fixture" }],
+  "resources": [
+    { "key": "stylist_a", "name": "Demo stylist A", "locationKey": "studio", "kind": "STAFF" },
+    { "key": "chair_a", "name": "Demo chair A", "locationKey": "studio", "kind": "EQUIPMENT" }
+  ],
+  "services": [{
+    "key": "haircut", "name": "Demo haircut", "locationKey": "studio", "mode": "APPOINTMENT",
+    "durationMinutes": 30, "bufferBeforeMinutes": 0, "bufferAfterMinutes": 10,
+    "price": { "amountMinor": 3500, "currency": "EUR" },
+    "requirements": [
+      { "selection": "ANY", "resourceKeys": ["stylist_a"], "quantity": 1 },
+      { "selection": "ALL", "resourceKeys": ["chair_a"], "quantity": 1 }
+    ],
+    "published": true
+  }],
+  "schedules": [
+    { "key": "stylist_weekday", "resourceKey": "stylist_a", "daysOfWeek": [1, 2, 3, 4, 5], "intervals": [{ "start": "09:00", "end": "17:00", "endsNextDay": false }] },
+    { "key": "chair_weekday", "resourceKey": "chair_a", "daysOfWeek": [1, 2, 3, 4, 5], "intervals": [{ "start": "09:00", "end": "17:00", "endsNextDay": false }] }
+  ],
+  "policies": {
+    "minimumAdvanceMinutes": 60, "maximumAdvanceDays": 60, "cancellationNoticeMinutes": 1440,
+    "holdSeconds": 300, "quoteSeconds": 600, "contactVerification": "NONE", "paymentRequirement": "NONE"
+  },
+  "contactForm": { "fields": [
+    { "key": "name", "kind": "NAME", "label": "Name", "required": true, "maxLength": 120 },
+    { "key": "email", "kind": "EMAIL", "label": "Email", "required": true, "maxLength": 254 },
+    { "key": "note", "kind": "NOTE", "label": "Optional note", "required": false, "maxLength": 300 }
+  ] },
+  "page": {
+    "brand": { "primaryColor": "#234A45", "accentColor": "#A85631" },
+    "components": [
+      { "component": "businessHeader", "heading": "Synthetic Studio" },
+      { "component": "serviceList", "heading": "Choose a service" },
+      { "component": "bookingForm", "heading": "Choose a time" },
+      { "component": "policySummary", "heading": "Booking terms" }
+    ]
+  },
+  "provenance": {
+    "/locations/0/timeZone": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/services/0/durationMinutes": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/services/0/bufferBeforeMinutes": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/services/0/bufferAfterMinutes": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/services/0/price/amountMinor": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/services/0/price/currency": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/services/0/mode": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/services/0/requirements": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/schedules/0": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/schedules/1": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/policies/minimumAdvanceMinutes": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/policies/maximumAdvanceDays": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/policies/cancellationNoticeMinutes": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/policies/holdSeconds": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/policies/quoteSeconds": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/policies/contactVerification": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/policies/paymentRequirement": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" },
+    "/contactForm": { "basis": "SUPPLIED", "sourceLabel": "Synthetic fixture specification" }
+  },
+  "connectorReferences": []
+}

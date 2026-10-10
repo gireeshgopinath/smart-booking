@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "taskId": "T01",
+  "slice": "S01",
+  "runId": "inventory-20261010T160924955Z-5de0b316",
+  "startedAtUtc": "2026-10-10T16:09:24.9524154Z",
+  "finishedAtUtc": "2026-10-10T16:10:29.3721483Z",
+  "command": "pwsh -NoProfile -File scripts/verify/verify-T01-inventory.ps1",
+  "sourceFingerprint": "no-git-sha256:f3dd2a88409a943c9255cc278b64dd77e0ce7ad8e1067a24698342265e0364d4",
+  "environment": {
+    "powershell": "7.6.5",
+    "os": "Microsoft Windows 10.0.26200",
+    "workspace": "C:\\Users\\giree\\OneDrive\\Desktop\\booking"
+  },
+  "data": {
+    "probes": [
+      {
+        "command": "git",
+        "arguments": [
+          "status",
+          "--short"
+        ],
+        "resolvedExecutable": "C:\\Program Files\\Git\\cmd\\git.exe",
+        "startedAtUtc": "2026-10-10T16:10:23.4700932Z",
+        "endedAtUtc": "2026-10-10T16:10:23.5833770Z",
+        "exitCode": 128,
+        "state": "FAILED",
+        "output": "fatal: not a git repository (or any of the parent directories): .git\n"
+      },
+      {
+        "command": "git",
+        "arguments": [
+          "rev-parse",
+          "--verify",
+          "HEAD"
+        ],
+        "resolvedExecutable": "C:\\Program Files\\Git\\cmd\\git.exe",
+        "startedAtUtc": "2026-10-10T16:10:23.5846136Z",
+        "endedAtUtc": "2026-10-10T16:10:23.6742522Z",
+        "exitCode": 128,
+        "state": "FAILED",
+        "output": "fatal: not a git repository (or any of the parent directories): .git\n"
+      },
+      {
+        "command": "java",
+        "arguments": [
+          "-version"
+        ],
+        "resolvedExecutable": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\java.exe",
+        "startedAtUtc": "2026-10-10T16:10:23.6744506Z",
+        "endedAtUtc": "2026-10-10T16:10:23.8053302Z",
+        "exitCode": 0,
+        "state": "SUCCEEDED",
+        "output": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\r\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\r\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\r\n"
+      },
+      {
+        "command": "javac",
+        "arguments": [
+          "-version"
+        ],
+        "resolvedExecutable": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin\\javac.exe",
+        "startedAtUtc": "2026-10-10T16:10:23.8055392Z",
+        "endedAtUtc": "2026-10-10T16:10:24.0052741Z",
+        "exitCode": 0,
+        "state": "SUCCEEDED",
+        "output": "javac 25.0.4.1\r\n"
+      },
+      {
+        "command": "mvn",
+        "arguments": [
+          "--version"
+        ],
+        "startedAtUtc": "2026-10-10T16:10:24.0054204Z",
+        "endedAtUtc": "2026-10-10T16:10:25.5675715Z",
+        "exitCode": null,
+        "state": "MISSING",
+        "output": "Executable not found on PATH."
+      },
+      {
+        "command": "docker",
+        "arguments": [
+          "version"
+        ],
+        "resolvedExecutable": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe",
+        "startedAtUtc": "2026-10-10T16:10:25.5677256Z",
+        "endedAtUtc": "2026-10-10T16:10:25.7563665Z",
+        "exitCode": 1,
+        "state": "FAILED",
+        "output": "Client:\n Version:           29.8.0\n API version:       1.56\n Go version:        go1.26.8\n Git commit:        88096ef\n Built:             Thu Sep  3 21:53:38 2026\n OS/Arch:           windows/amd64\n Context:           desktop-linux\npermission denied while trying to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine\n"
+      },
+      {
+        "command": "node",
+        "arguments": [
+          "--version"
+        ],
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\node.exe",
+        "startedAtUtc": "2026-10-10T16:10:25.7565152Z",
+        "endedAtUtc": "2026-10-10T16:10:25.8402005Z",
+        "exitCode": 0,
+        "state": "SUCCEEDED",
+        "output": "v22.17.0\r\n"
+      },
+      {
+        "command": "python",
+        "arguments": [
+          "--version"
+        ],
+        "resolvedExecutable": "C:\\Users\\giree\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "startedAtUtc": "2026-10-10T16:10:25.8404124Z",
+        "endedAtUtc": "2026-10-10T16:10:25.9025868Z",
+        "exitCode": 0,
+        "state": "SUCCEEDED",
+        "output": "Python 3.12.10\r\n"
+      }
+    ],
+    "ports": [
+      {
+        "address": "127.0.0.1",
+        "port": 5432,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 6379,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 8080,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 7233,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 4566,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 1025,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 8025,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 1234,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      },
+      {
+        "address": "127.0.0.1",
+        "port": 11434,
+        "state": "NOT_REACHABLE",
+        "observation": "TCP only; no health/inference/identity claim"
+      }
+    ],
+    "services": [],
+    "serviceProbe": "UNAVAILABLE_OR_NO_MATCHING_SERVICE",
+    "limitations": "Absent Maven and failed Docker/Git probes are observations, not healthy runtime dependencies. Models are neither enumerated nor invoked."
+  }
+}

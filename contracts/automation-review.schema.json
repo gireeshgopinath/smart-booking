@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["taskId", "reviewedRevision", "decision", "taskComplete", "summary", "findings", "criteria", "limitations"],
+  "properties": {
+    "taskId": {"type": "string", "pattern": "^T[0-9]{2}$"},
+    "reviewedRevision": {"type": "string"},
+    "decision": {"type": "string", "enum": ["APPROVE", "REQUEST_CHANGES", "BLOCKED"]},
+    "taskComplete": {"type": "boolean"},
+    "summary": {"type": "string"},
+    "findings": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["severity", "message", "requiredAction"], "properties": {"severity": {"type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"]}, "message": {"type": "string"}, "requiredAction": {"type": "string"}}}},
+    "criteria": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["criterion", "passed", "evidencePaths"], "properties": {"criterion": {"type": "string"}, "passed": {"type": "boolean"}, "evidencePaths": {"type": "array", "items": {"type": "string"}}}}},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

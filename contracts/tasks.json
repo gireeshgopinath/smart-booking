@@ -1,0 +1,868 @@
+{
+  "schemaVersion": "1.0",
+  "provenance": "Derived from supplied Master Execution Plan v2; T26 prior tasks means T01-T25 backend checkpoint. Referenced original R01-R30 definitions were not supplied.",
+  "tasks": [
+    {
+      "id": "T01",
+      "title": "Repository assessment and dependency baseline",
+      "dependencies": [],
+      "specPath": "docs/features/T01.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T01 — Repository assessment and dependency baseline"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T02",
+      "title": "Application skeleton and contracts",
+      "dependencies": [
+        "T01"
+      ],
+      "specPath": "docs/features/T02.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T02 — Application skeleton and contracts"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T03",
+      "title": "Local dependencies and secret setup",
+      "dependencies": [
+        "T02"
+      ],
+      "specPath": "docs/features/T03.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T03 — Local dependencies and secret setup"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T04",
+      "title": "Tenant directory, OIDC and authorization",
+      "dependencies": [
+        "T02",
+        "T03"
+      ],
+      "specPath": "docs/features/T04.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T04 — Tenant directory, OIDC and authorization"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T05",
+      "title": "Persistent schema and resource invariants",
+      "dependencies": [
+        "T04"
+      ],
+      "specPath": "docs/features/T05.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T05 — Persistent schema and resource invariants"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T06",
+      "title": "Business catalog and scheduling administration",
+      "dependencies": [
+        "T05"
+      ],
+      "specPath": "docs/features/T06.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T06 — Business catalog and scheduling administration"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T07",
+      "title": "Availability engine",
+      "dependencies": [
+        "T06"
+      ],
+      "specPath": "docs/features/T07.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T07 — Availability engine"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T08",
+      "title": "Guest sessions, proposals and holds",
+      "dependencies": [
+        "T04",
+        "T05",
+        "T07"
+      ],
+      "specPath": "docs/features/T08.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T08 — Guest sessions, proposals and holds"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T09",
+      "title": "Booking confirmation, cancellation and rescheduling",
+      "dependencies": [
+        "T08"
+      ],
+      "specPath": "docs/features/T09.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T09 — Booking confirmation, cancellation and rescheduling"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T10",
+      "title": "Capacity sessions and waitlists",
+      "dependencies": [
+        "T09"
+      ],
+      "specPath": "docs/features/T10.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T10 — Capacity sessions and waitlists"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T11",
+      "title": "Events, inbox/outbox and notification delivery",
+      "dependencies": [
+        "T09"
+      ],
+      "specPath": "docs/features/T11.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T11 — Events, inbox/outbox and notification delivery"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T12",
+      "title": "Durable booking workflows",
+      "dependencies": [
+        "T11"
+      ],
+      "specPath": "docs/features/T12.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T12 — Durable booking workflows"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T13",
+      "title": "Dummy payment extension",
+      "dependencies": [
+        "T09",
+        "T11",
+        "T12"
+      ],
+      "specPath": "docs/features/T13.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T13 — Dummy payment extension"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T14",
+      "title": "Calendar connections and conflict handling",
+      "dependencies": [
+        "T06",
+        "T09",
+        "T11"
+      ],
+      "specPath": "docs/features/T14.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T14 — Calendar connections and conflict handling"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T15",
+      "title": "Reporting, audit access and retention",
+      "dependencies": [
+        "T09",
+        "T10",
+        "T11"
+      ],
+      "specPath": "docs/features/T15.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T15 — Reporting, audit access and retention"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T16",
+      "title": "Model gateway and AI execution budgets",
+      "dependencies": [
+        "T02",
+        "T04",
+        "T11"
+      ],
+      "specPath": "docs/features/T16.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T16 — Model gateway and AI execution budgets"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T17",
+      "title": "Booking agent and mutation authorization",
+      "dependencies": [
+        "T08",
+        "T09",
+        "T12",
+        "T16"
+      ],
+      "specPath": "docs/features/T17.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T17 — Booking agent and mutation authorization"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T18",
+      "title": "Business setup, recovery and reporting agents",
+      "dependencies": [
+        "T15",
+        "T17"
+      ],
+      "specPath": "docs/features/T18.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T18 — Business setup, recovery and reporting agents"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T19",
+      "title": "MCP and A2A interfaces",
+      "dependencies": [
+        "T17",
+        "T18"
+      ],
+      "specPath": "docs/features/T19.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T19 — MCP and A2A interfaces"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T20",
+      "title": "Cell routing and migration safety",
+      "dependencies": [
+        "T04",
+        "T09",
+        "T11",
+        "T12"
+      ],
+      "specPath": "docs/features/T20.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T20 — Cell routing and migration safety"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T21",
+      "title": "Telemetry, admission and operational controls",
+      "dependencies": [
+        "T11",
+        "T16",
+        "T20"
+      ],
+      "specPath": "docs/features/T21.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T21 — Telemetry, admission and operational controls"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T22",
+      "title": "Complete Docker Compose release",
+      "dependencies": [
+        "T10",
+        "T11",
+        "T12",
+        "T13",
+        "T14",
+        "T15",
+        "T16",
+        "T17",
+        "T18",
+        "T19",
+        "T20",
+        "T21"
+      ],
+      "specPath": "docs/features/T22.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T22 — Complete Docker Compose release"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T23",
+      "title": "Kubernetes deployment and recovery",
+      "dependencies": [
+        "T22"
+      ],
+      "specPath": "docs/features/T23.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T23 — Kubernetes deployment and recovery"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T24",
+      "title": "Cloud infrastructure and CI delivery",
+      "dependencies": [
+        "T22",
+        "T23"
+      ],
+      "specPath": "docs/features/T24.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T24 — Cloud infrastructure and CI delivery"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T25",
+      "title": "Load, resilience and restore verification",
+      "dependencies": [
+        "T22",
+        "T23"
+      ],
+      "specPath": "docs/features/T25.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T25 — Load, resilience and restore verification"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T26",
+      "title": "Final independent verification and handoff",
+      "dependencies": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08",
+        "T09",
+        "T10",
+        "T11",
+        "T12",
+        "T13",
+        "T14",
+        "T15",
+        "T16",
+        "T17",
+        "T18",
+        "T19",
+        "T20",
+        "T21",
+        "T22",
+        "T23",
+        "T24",
+        "T25"
+      ],
+      "specPath": "docs/features/T26.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T26 — Final independent verification and handoff"
+      },
+      "sourceRequirementReferences": null,
+      "requiredEntryPoints": []
+    },
+    {
+      "id": "T27",
+      "title": "Frontend baseline and shared design system",
+      "dependencies": [
+        "T02",
+        "T09"
+      ],
+      "specPath": "docs/features/T27.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T27 Frontend baseline and shared design system"
+      },
+      "sourceRequirementReferences": "R02,R08",
+      "requiredEntryPoints": [
+        "make frontend-check",
+        "make ui-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T27/",
+        "docs/execution/review-packets/T27.md"
+      ]
+    },
+    {
+      "id": "T28",
+      "title": "Business portal and operational calendar",
+      "dependencies": [
+        "T06",
+        "T09",
+        "T10",
+        "T15",
+        "T27"
+      ],
+      "specPath": "docs/features/T28.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T28 Business portal and operational calendar"
+      },
+      "sourceRequirementReferences": "R03,R04,R08,R09,R12",
+      "requiredEntryPoints": [
+        "make frontend-check",
+        "make business-e2e"
+      ],
+      "evidencePaths": [
+        "docs/verification/T28/",
+        "docs/execution/review-packets/T28.md"
+      ]
+    },
+    {
+      "id": "T29",
+      "title": "Complete guest booking and self management",
+      "dependencies": [
+        "T08",
+        "T09",
+        "T10",
+        "T11",
+        "T13",
+        "T27"
+      ],
+      "specPath": "docs/features/T29.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T29 Complete guest booking and self management"
+      },
+      "sourceRequirementReferences": "R01,R02,R05,R06,R07,R10,R11,R13",
+      "requiredEntryPoints": [
+        "make guest-e2e",
+        "make simulator-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T29/",
+        "docs/execution/review-packets/T29.md"
+      ]
+    },
+    {
+      "id": "T30",
+      "title": "Accessibility and localization verification",
+      "dependencies": [
+        "T28",
+        "T29"
+      ],
+      "specPath": "docs/features/T30.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T30 Accessibility and localization verification"
+      },
+      "sourceRequirementReferences": "R02,R14",
+      "requiredEntryPoints": [
+        "make accessibility-test",
+        "make frontend-check"
+      ],
+      "evidencePaths": [
+        "docs/verification/T30/",
+        "docs/execution/review-packets/T30.md"
+      ]
+    },
+    {
+      "id": "T31",
+      "title": "Versioned blueprint persistence and semantic validation",
+      "dependencies": [
+        "T05",
+        "T06",
+        "T15",
+        "T16"
+      ],
+      "specPath": "docs/features/T31.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T31 Versioned blueprint persistence and semantic validation"
+      },
+      "sourceRequirementReferences": "R15,R16,R24",
+      "requiredEntryPoints": [
+        "make blueprint-test",
+        "make integration-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T31/",
+        "docs/execution/review-packets/T31.md"
+      ]
+    },
+    {
+      "id": "T32",
+      "title": "Booking rehearsal and live change impact",
+      "dependencies": [
+        "T07",
+        "T09",
+        "T10",
+        "T31"
+      ],
+      "specPath": "docs/features/T32.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T32 Booking rehearsal and live change impact"
+      },
+      "sourceRequirementReferences": "R18,R19",
+      "requiredEntryPoints": [
+        "make rehearsal-test",
+        "make impact-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T32/",
+        "docs/execution/review-packets/T32.md"
+      ]
+    },
+    {
+      "id": "T33",
+      "title": "AI builder and conversational customization UI",
+      "dependencies": [
+        "T18",
+        "T28",
+        "T31",
+        "T32"
+      ],
+      "specPath": "docs/features/T33.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T33 AI builder and conversational customization UI"
+      },
+      "sourceRequirementReferences": "R15,R16,R17,R18,R19",
+      "requiredEntryPoints": [
+        "make builder-e2e",
+        "make agent-eval",
+        "make blueprint-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T33/",
+        "docs/execution/review-packets/T33.md"
+      ]
+    },
+    {
+      "id": "T34",
+      "title": "Connector registry and declarative mapping",
+      "dependencies": [
+        "T11",
+        "T14",
+        "T15",
+        "T28"
+      ],
+      "specPath": "docs/features/T34.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T34 Connector registry and declarative mapping"
+      },
+      "sourceRequirementReferences": "R20,R21",
+      "requiredEntryPoints": [
+        "make connector-test",
+        "make business-e2e"
+      ],
+      "evidencePaths": [
+        "docs/verification/T34/",
+        "docs/execution/review-packets/T34.md"
+      ]
+    },
+    {
+      "id": "T35",
+      "title": "Intent booking experience and protocol client evidence",
+      "dependencies": [
+        "T17",
+        "T19",
+        "T29",
+        "T30"
+      ],
+      "specPath": "docs/features/T35.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T35 Intent booking experience and protocol client evidence"
+      },
+      "sourceRequirementReferences": "R14,R25",
+      "requiredEntryPoints": [
+        "make assistant-e2e",
+        "make agent-eval",
+        "make agent-live-test",
+        "make protocol-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T35/",
+        "docs/execution/review-packets/T35.md"
+      ]
+    },
+    {
+      "id": "T36",
+      "title": "Portable templates and safe automation recipes",
+      "dependencies": [
+        "T31",
+        "T33",
+        "T34"
+      ],
+      "specPath": "docs/features/T36.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T36 Portable templates and safe automation recipes"
+      },
+      "sourceRequirementReferences": "R16,R21,R24",
+      "requiredEntryPoints": [
+        "make blueprint-test",
+        "make automation-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T36/",
+        "docs/execution/review-packets/T36.md"
+      ]
+    },
+    {
+      "id": "T37",
+      "title": "Disruption and cancellation recovery workflow",
+      "dependencies": [
+        "T10",
+        "T12",
+        "T18",
+        "T28",
+        "T29",
+        "T34"
+      ],
+      "specPath": "docs/features/T37.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T37 Disruption and cancellation recovery workflow"
+      },
+      "sourceRequirementReferences": "R11,R22",
+      "requiredEntryPoints": [
+        "make recovery-test",
+        "make recovery-e2e"
+      ],
+      "evidencePaths": [
+        "docs/verification/T37/",
+        "docs/execution/review-packets/T37.md"
+      ]
+    },
+    {
+      "id": "T38",
+      "title": "Explainable business insights and product measurements",
+      "dependencies": [
+        "T15",
+        "T18",
+        "T28",
+        "T33"
+      ],
+      "specPath": "docs/features/T38.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T38 Explainable business insights and product measurements"
+      },
+      "sourceRequirementReferences": "R23",
+      "requiredEntryPoints": [
+        "make reporting-test",
+        "make telemetry-test"
+      ],
+      "evidencePaths": [
+        "docs/verification/T38/",
+        "docs/execution/review-packets/T38.md"
+      ]
+    },
+    {
+      "id": "T39",
+      "title": "Future feature experimental contracts",
+      "dependencies": [
+        "T31",
+        "T35",
+        "T37",
+        "T38"
+      ],
+      "specPath": "docs/features/T39.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T39 Future feature experimental contracts"
+      },
+      "sourceRequirementReferences": "R26,R27,R28",
+      "requiredEntryPoints": [
+        "make experimental-test",
+        "make agent-eval"
+      ],
+      "evidencePaths": [
+        "docs/verification/T39/",
+        "docs/execution/review-packets/T39.md"
+      ]
+    },
+    {
+      "id": "T40",
+      "title": "Whole application deployment and capacity measurement",
+      "dependencies": [
+        "T23",
+        "T24",
+        "T25",
+        "T30",
+        "T33",
+        "T34",
+        "T35",
+        "T36",
+        "T37",
+        "T38"
+      ],
+      "specPath": "docs/features/T40.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T40 Whole application deployment and capacity measurement"
+      },
+      "sourceRequirementReferences": "R29,R30",
+      "requiredEntryPoints": [
+        "make app-e2e",
+        "make k8s-smoke",
+        "make restore-test",
+        "make load-local",
+        "make terraform-check"
+      ],
+      "evidencePaths": [
+        "docs/verification/T40/",
+        "docs/execution/review-packets/T40.md"
+      ]
+    },
+    {
+      "id": "T41",
+      "title": "Independent full application release verification",
+      "dependencies": [
+        "T26",
+        "T30",
+        "T33",
+        "T35",
+        "T36",
+        "T37",
+        "T38",
+        "T39",
+        "T40"
+      ],
+      "specPath": "docs/features/T41.md",
+      "risk": "HIGH",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T41 Independent full application release verification"
+      },
+      "sourceRequirementReferences": "R01-R30",
+      "requiredEntryPoints": [
+        "make verify-release",
+        "make app-e2e",
+        "make agent-eval"
+      ],
+      "evidencePaths": [
+        "docs/verification/T41/",
+        "docs/execution/review-packets/T41.md"
+      ]
+    },
+    {
+      "id": "T42",
+      "title": "Handoff and pilot readiness decision",
+      "dependencies": [
+        "T41"
+      ],
+      "specPath": "docs/features/T42.md",
+      "risk": "NORMAL",
+      "source": {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "section": "T42 Handoff and pilot readiness decision"
+      },
+      "sourceRequirementReferences": "R30",
+      "requiredEntryPoints": [
+        "make verify-docs",
+        "make doctor",
+        "make smoke"
+      ],
+      "evidencePaths": [
+        "docs/verification/T42/",
+        "docs/execution/review-packets/T42.md"
+      ]
+    }
+  ]
+}

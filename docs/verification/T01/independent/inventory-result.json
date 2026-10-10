@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "taskId": "T01",
+  "slice": "S01",
+  "runId": "inventory-20261010T160924955Z-5de0b316",
+  "startedAtUtc": "2026-10-10T16:09:24.9524154Z",
+  "finishedAtUtc": "2026-10-10T16:10:29.4309983Z",
+  "command": "pwsh -NoProfile -File scripts/verify/verify-T01-inventory.ps1",
+  "sourceFingerprint": "no-git-sha256:f3dd2a88409a943c9255cc278b64dd77e0ce7ad8e1067a24698342265e0364d4",
+  "environment": {
+    "powershell": "7.6.5",
+    "os": "Microsoft Windows 10.0.26200",
+    "workspace": "C:\\Users\\giree\\OneDrive\\Desktop\\booking"
+  },
+  "data": {
+    "exitCode": 1,
+    "passed": false,
+    "problems": [
+      "Preexisting generated artifact changed: docs/verification/T01/negatives/D-wrapper-checksum-mismatch.log",
+      "Preexisting generated artifact changed during verification: docs/verification/T01/negatives/D-wrapper-checksum-mismatch.log"
+    ],
+    "parentTaskComplete": false,
+    "remainingMandatorySlices": [
+      "S02 official compatibility and checksum",
+      "S03 library compatibility tests",
+      "S04 clean staging build and negative controls",
+      "S05 secret scan",
+      "S06 independent verification and separate review"
+    ]
+  }
+}

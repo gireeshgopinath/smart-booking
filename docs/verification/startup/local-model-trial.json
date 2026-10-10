@@ -1,0 +1,44 @@
+{
+  "recordedAt": "2026-10-10T10:26:38.982992+00:00",
+  "scope": "Development capability fixture only; not application V16 or any T01-T42 task",
+  "provider": "lmstudio",
+  "model": "qwen3.8-flash-next",
+  "cliVersion": "0.162.1",
+  "endpointInventory": "PASS: /v1/models returned exact ID",
+  "loadedModel": {
+    "sizeGB": 75.44,
+    "context": 262144,
+    "parallel": 4
+  },
+  "trialStartedAtUTC": "2026-10-10T10:19:08Z",
+  "command": "codex exec --oss --local-provider lmstudio --model qwen3.8-flash-next --ignore-user-config --sandbox workspace-write --cd <workspace>/.local-ai-trial --output-last-message trial-result.txt --color never -",
+  "observedHeaderSandbox": "read-only",
+  "observedModelStateDuringTrial": "PROCESSINGPROMPT",
+  "observedToolEvents": 0,
+  "result": "TIMEOUT_STOPPED_BY_OPERATOR",
+  "modelEditOccurred": false,
+  "fixtureTestExitBefore": 1,
+  "fixtureTestExitAfter": 1,
+  "testFileSha256": "b184fd9ef972d681d70496eb482be6e5d3e79d86166803af7f6b7282e85b8ba9",
+  "sandboxProbe": {
+    "command": "codex -c windows.sandbox=mxc sandbox --include-managed-config --permission-profile :workspace -- cmd.exe /d /c echo MXC_OK",
+    "exitCode": 0,
+    "output": "MXC_OK",
+    "globalConfigChanged": false
+  },
+  "subsequentMemoryEstimate": {
+    "candidate": "qwen3.8-27b",
+    "context": 32768,
+    "parallel": 1,
+    "estimatedTotalGiB": 21.73,
+    "freeSystemGiB": 10.1,
+    "modelLoaded": false
+  },
+  "warnings": [
+    "Fallback model metadata used",
+    "Model inventory refresh decode warning",
+    "Requested workspace-write was displayed as read-only"
+  ],
+  "nextAction": "Preserve working sandbox config, use proven MXC per-call if needed, and deliberately select a smaller installed model with measured memory/context before a fresh bounded trial. Do not load another 21.73GiB model while only10.1GiB system RAM was free.",
+  "applicationTaskStatusChanged": false
+}

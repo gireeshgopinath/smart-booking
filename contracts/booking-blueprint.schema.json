@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:booking:portable-blueprint:1.0.0",
+  "title": "Portable booking blueprint starter",
+  "$comment": "Reconstructed starter contract. T31 must add semantic validation, provenance coverage, reference resolution and version migration. Schema validity never authorizes publication.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "business", "locations", "resources", "services", "schedules", "policies", "contactForm", "page", "provenance", "connectorReferences"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "business": {
+      "type": "object", "additionalProperties": false,
+      "required": ["displayName", "defaultLocale", "supportedLocales"],
+      "properties": {
+        "displayName": { "$ref": "#/$defs/label" },
+        "description": { "type": "string", "maxLength": 2000 },
+        "defaultLocale": { "$ref": "#/$defs/locale" },
+        "supportedLocales": { "type": "array", "minItems": 1, "maxItems": 10, "uniqueItems": true, "items": { "$ref": "#/$defs/locale" } }
+      }
+    },
+    "locations": { "type": "array", "minItems": 1, "maxItems": 20, "items": { "$ref": "#/$defs/location" } },
+    "resources": { "type": "array", "minItems": 1, "maxItems": 200, "items": { "$ref": "#/$defs/resource" } },
+    "services": { "type": "array", "minItems": 1, "maxItems": 200, "items": { "$ref": "#/$defs/service" } },
+    "schedules": { "type": "array", "minItems": 1, "maxItems": 200, "items": { "$ref": "#/$defs/schedule" } },
+    "policies": {
+      "type": "object", "additionalProperties": false,
+      "required": ["minimumAdvanceMinutes", "maximumAdvanceDays", "cancellationNoticeMinutes", "holdSeconds", "quoteSeconds", "contactVerification", "paymentRequirement"],
+      "properties": {
+        "minimumAdvanceMinutes": { "type": "integer", "minimum": 0, "maximum": 43200 },
+        "maximumAdvanceDays": { "type": "integer", "minimum": 1, "maximum": 366 },
+        "cancellationNoticeMinutes": { "type": "integer", "minimum": 0, "maximum": 43200 },
+        "holdSeconds": { "type": "integer", "minimum": 30, "maximum": 900 },
+        "quoteSeconds": { "type": "integer", "minimum": 30, "maximum": 3600 },
+        "contactVerification": { "enum": ["NONE", "EMAIL_CODE", "PHONE_CODE"] },
+        "paymentRequirement": { "enum": ["NONE", "SIMULATED_DEPOSIT"] }
+      }
+    },
+    "contactForm": {
+      "type": "object", "additionalProperties": false, "required": ["fields"],
+      "properties": { "fields": { "type": "array", "minItems": 1, "maxItems": 10, "items": { "$ref": "#/$defs/formField" } } }
+    },
+    "page": {
+      "type": "object", "additionalProperties": false, "required": ["brand", "components"],
+      "properties": {
+        "brand": {
+          "type": "object", "additionalProperties": false, "required": ["primaryColor", "accentColor"],
+          "properties": {
+            "primaryColor": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+            "accentColor": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+          }
+        },
+        "components": {
+          "type": "array", "minItems": 1, "maxItems": 12,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["component", "heading"],
+            "properties": {
+              "component": { "enum": ["businessHeader", "serviceList", "bookingForm", "policySummary"] },
+              "heading": { "$ref": "#/$defs/label" }
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object", "minProperties": 1, "maxProperties": 2000,
+      "propertyNames": { "pattern": "^/", "maxLength": 300 },
+      "additionalProperties": {
+        "type": "object", "additionalProperties": false, "required": ["basis", "sourceLabel"],
+        "properties": {
+          "basis": { "enum": ["SUPPLIED", "INFERRED", "UNRESOLVED"] },
+          "sourceLabel": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "evidenceReference": { "type": "string", "maxLength": 200 },
+          "humanResolution": { "type": "string", "maxLength": 500 }
+        }
+      }
+    },
+    "connectorReferences": {
+      "type": "array", "maxItems": 20,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["referenceKey", "kind", "required"],
+        "properties": {
+          "referenceKey": { "$ref": "#/$defs/key" },
+          "kind": { "enum": ["CALENDAR", "SMTP", "SMS_SINK", "CRM_DEMO", "SIGNED_WEBHOOK"] },
+          "required": { "type": "boolean" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "key": { "type": "string", "pattern": "^[a-z][a-z0-9_-]{0,63}$" },
+    "label": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "locale": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$" },
+    "localTime": { "type": "string", "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$" },
+    "location": {
+      "type": "object", "additionalProperties": false, "required": ["key", "name", "timeZone"],
+      "properties": {
+        "key": { "$ref": "#/$defs/key" }, "name": { "$ref": "#/$defs/label" },
+        "timeZone": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "publicAddress": { "type": "string", "maxLength": 300 }
+      }
+    },
+    "resource": {
+      "type": "object", "additionalProperties": false, "required": ["key", "name", "locationKey", "kind"],
+      "properties": {
+        "key": { "$ref": "#/$defs/key" }, "name": { "$ref": "#/$defs/label" },
+        "locationKey": { "$ref": "#/$defs/key" }, "kind": { "enum": ["STAFF", "ROOM", "EQUIPMENT"] }
+      }
+    },
+    "service": {
+      "type": "object", "additionalProperties": false,
+      "required": ["key", "name", "locationKey", "mode", "durationMinutes", "bufferBeforeMinutes", "bufferAfterMinutes", "price", "requirements", "published"],
+      "properties": {
+        "key": { "$ref": "#/$defs/key" }, "name": { "$ref": "#/$defs/label" },
+        "locationKey": { "$ref": "#/$defs/key" }, "mode": { "enum": ["APPOINTMENT", "SESSION"] },
+        "durationMinutes": { "type": "integer", "minimum": 1, "maximum": 1440 },
+        "bufferBeforeMinutes": { "type": "integer", "minimum": 0, "maximum": 240 },
+        "bufferAfterMinutes": { "type": "integer", "minimum": 0, "maximum": 240 },
+        "occurrenceCapacity": { "type": "integer", "minimum": 1, "maximum": 10000 },
+        "price": {
+          "type": "object", "additionalProperties": false, "required": ["amountMinor", "currency"],
+          "properties": { "amountMinor": { "type": "integer", "minimum": 0, "maximum": 1000000000 }, "currency": { "type": "string", "pattern": "^[A-Z]{3}$" } }
+        },
+        "requirements": {
+          "type": "array", "minItems": 1, "maxItems": 20,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["selection", "resourceKeys", "quantity"],
+            "properties": {
+              "selection": { "enum": ["ANY", "ALL"] },
+              "resourceKeys": { "type": "array", "minItems": 1, "maxItems": 50, "uniqueItems": true, "items": { "$ref": "#/$defs/key" } },
+              "quantity": { "type": "integer", "minimum": 1, "maximum": 50 }
+            }
+          }
+        },
+        "published": { "type": "boolean" }
+      },
+      "allOf": [
+        { "if": { "properties": { "mode": { "const": "SESSION" } }, "required": ["mode"] }, "then": { "required": ["occurrenceCapacity"] }, "else": { "not": { "required": ["occurrenceCapacity"] } } }
+      ]
+    },
+    "schedule": {
+      "type": "object", "additionalProperties": false, "required": ["key", "resourceKey", "daysOfWeek", "intervals"],
+      "properties": {
+        "key": { "$ref": "#/$defs/key" }, "resourceKey": { "$ref": "#/$defs/key" },
+        "daysOfWeek": { "type": "array", "minItems": 1, "maxItems": 7, "uniqueItems": true, "items": { "type": "integer", "minimum": 1, "maximum": 7 } },
+        "intervals": {
+          "type": "array", "minItems": 1, "maxItems": 10,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["start", "end", "endsNextDay"],
+            "properties": { "start": { "$ref": "#/$defs/localTime" }, "end": { "$ref": "#/$defs/localTime" }, "endsNextDay": { "type": "boolean" } }
+          }
+        }
+      }
+    },
+    "formField": {
+      "type": "object", "additionalProperties": false, "required": ["key", "kind", "label", "required", "maxLength"],
+      "properties": {
+        "key": { "$ref": "#/$defs/key" }, "kind": { "enum": ["NAME", "EMAIL", "PHONE", "NOTE", "CHOICE"] },
+        "label": { "$ref": "#/$defs/label" }, "required": { "type": "boolean" },
+        "maxLength": { "type": "integer", "minimum": 1, "maximum": 1000 },
+        "choices": { "type": "array", "minItems": 1, "maxItems": 20, "uniqueItems": true, "items": { "$ref": "#/$defs/label" } }
+      },
+      "allOf": [
+        { "if": { "properties": { "kind": { "const": "CHOICE" } }, "required": ["kind"] }, "then": { "required": ["choices"] }, "else": { "not": { "required": ["choices"] } } }
+      ]
+    }
+  }
+}

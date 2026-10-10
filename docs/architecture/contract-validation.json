@@ -1,0 +1,29 @@
+{
+  "artifactScope": "development-pack-contracts-only",
+  "applicationImplementationVerified": false,
+  "status": "PASS",
+  "timestampUtc": "2026-10-10T10:25:25.109688+00:00",
+  "pythonVersion": "3.12.10",
+  "validator": "jsonschema 4.25.1 / Draft202012Validator; isolated TEMP dependency",
+  "commandExitCode": 0,
+  "checks": [
+    "schema-valid",
+    "synthetic-example-valid",
+    "runtime tenant authority rejected",
+    "raw html rejected",
+    "real provider rejected",
+    "bank field rejected",
+    "unknown component rejected",
+    "import status rejected",
+    "invalid interval shape rejected",
+    "unsupported schema version rejected",
+    "architecture-markdown-relative-links"
+  ],
+  "sourceSha256": {
+    "contracts/booking-blueprint.schema.json": "75d7de54e84db276d5bbdb970ee58052864dd0803e9d5d45b8dc00fecd438dc6",
+    "examples/salon.blueprint.json": "93edf2e89212d82535fbd14a1ca8c7780445d823634358447ec0dc605a6e3ac3"
+  },
+  "limitations": [
+    "Structural schema checks only; no application, semantic validator, actual publication, model or database behavior verified."
+  ]
+}

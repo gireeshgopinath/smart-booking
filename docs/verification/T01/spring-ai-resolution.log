@@ -1,0 +1,203 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24049 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] booking-parent                                                     [pom]
+[INFO] api-contracts                                                      [jar]
+[INFO] domain                                                             [jar]
+[INFO] 
+[INFO] ---------------------< dev.booking:booking-parent >---------------------
+[INFO] Building booking-parent 0.1.0                                      [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.11.0:get (default-cli) @ booking-parent ---
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Resolving org.springframework.ai:spring-ai-client-chat:jar:2.0.1 with transitive dependencies
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-client-chat/2.0.1/spring-ai-client-chat-2.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-client-chat/2.0.1/spring-ai-client-chat-2.0.1.pom (4.7 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-model/2.0.1/spring-ai-model-2.0.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-swagger-2/5.0.0/jsonschema-module-swagger-2-5.0.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-core/3.8.7/reactor-core-3.8.7.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.38/swagger-annotations-jakarta-2.2.38.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/networknt/json-schema-validator/3.0.1/json-schema-validator-3.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-model/2.0.1/spring-ai-model-2.0.1.pom (5.3 kB at 97 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/7.0.9/spring-context-7.0.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-core/3.8.7/reactor-core-3.8.7.pom (2.3 kB at 32 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.38/swagger-annotations-jakarta-2.2.38.pom (3.3 kB at 40 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-swagger-2/5.0.0/jsonschema-module-swagger-2-5.0.0.pom (1.9 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/knuddels/jtokkit/1.1.0/jtokkit-1.1.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-project-jakarta/2.2.38/swagger-project-jakarta-2.2.38.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator-parent/5.0.0/jsonschema-generator-parent-5.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/networknt/json-schema-validator/3.0.1/json-schema-validator-3.0.1.pom (18 kB at 170 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator/5.0.0/jsonschema-generator-5.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/7.0.9/spring-context-7.0.9.pom (2.8 kB at 40 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator-parent/5.0.0/jsonschema-generator-parent-5.0.0.pom (19 kB at 458 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-project-jakarta/2.2.38/swagger-project-jakarta-2.2.38.pom (22 kB at 524 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/knuddels/jtokkit/1.1.0/jtokkit-1.1.0.pom (1.6 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator-bom/5.0.0/jsonschema-generator-bom-5.0.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.3.21/kotlin-reflect-2.3.21.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator/5.0.0/jsonschema-generator-5.0.0.pom (2.1 kB at 51 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-commons/2.0.1/spring-ai-commons-2.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.3.21/kotlin-reflect-2.3.21.pom (1.4 kB at 30 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator-bom/5.0.0/jsonschema-generator-bom-5.0.0.pom (4.7 kB at 96 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.pom (2.3 kB at 44 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-bom/3.0.3/jackson-bom-3.0.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-template-st/2.0.1/spring-ai-template-st-2.0.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.17.1/micrometer-observation-1.17.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-commons/2.0.1/spring-ai-commons-2.0.1.pom (4.1 kB at 46 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-template-st/2.0.1/spring-ai-template-st-2.0.1.pom (3.1 kB at 75 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-bom/3.0.3/jackson-bom-3.0.3.pom (20 kB at 485 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/7.0.9/spring-messaging-7.0.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.17.1/micrometer-observation-1.17.1.pom (4.0 kB at 84 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/73/oss-parent-73.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-jackson/5.0.0/jsonschema-module-jackson-5.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/7.0.9/spring-messaging-7.0.9.pom (2.2 kB at 64 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/73/oss-parent-73.pom (24 kB at 686 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.pom (3.6 kB at 91 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.1.5/jackson-databind-3.1.5.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/ethlo/time/itu/1.14.0/itu-1.14.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-master/4.13.1/antlr4-master-4.13.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.1.5/jackson-databind-3.1.5.pom (18 kB at 384 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-jackson/5.0.0/jsonschema-module-jackson-5.0.0.pom (2.2 kB at 26 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-master/4.13.1/antlr4-master-4.13.1.pom (4.8 kB at 127 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/ethlo/time/itu/1.14.0/itu-1.14.0.pom (18 kB at 457 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-base/3.1.5/jackson-base-3.1.5.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.1.0/jackson-databind-3.1.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/7.0.9/spring-aop-7.0.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom (2.8 kB at 69 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom (1.1 kB at 29 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.1.0/jackson-databind-3.1.0.pom (18 kB at 440 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/7.0.9/spring-aop-7.0.9.pom (2.2 kB at 51 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/7.0.9/spring-beans-7.0.9.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-base/3.1.0/jackson-base-3.1.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/7.0.9/spring-core-7.0.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-base/3.1.5/jackson-base-3.1.5.pom (16 kB at 181 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/7.0.9/spring-beans-7.0.9.pom (2.0 kB at 47 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-base/3.1.0/jackson-base-3.1.0.pom (16 kB at 356 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/7.0.9/spring-core-7.0.9.pom (2.2 kB at 63 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/7.0.9/spring-expression-7.0.9.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-bom/3.1.0/jackson-bom-3.1.0.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.2/classmate-1.7.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom (13 kB at 197 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-bom/2.0.17/slf4j-bom-2.0.17.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/7.0.9/spring-expression-7.0.9.pom (2.1 kB at 61 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.2/classmate-1.7.2.pom (6.5 kB at 181 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.pom (4.0 kB at 101 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-bom/3.1.0/jackson-bom-3.1.0.pom (20 kB at 484 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-core/3.0.3/jackson-core-3.0.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/74/oss-parent-74.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.0.3/jackson-databind-3.0.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/76/oss-parent-76.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-core/3.0.3/jackson-core-3.0.3.pom (10 kB at 295 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/74/oss-parent-74.pom (24 kB at 729 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-base/3.0.3/jackson-base-3.0.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.1/micrometer-core-1.17.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-bom/2.0.17/slf4j-bom-2.0.17.pom (7.3 kB at 54 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/76/oss-parent-76.pom (24 kB at 223 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.0.3/jackson-databind-3.0.3.pom (18 kB at 167 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/jackson-base/3.0.3/jackson-base-3.0.3.pom (16 kB at 234 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/context-propagation/1.2.1/context-propagation-1.2.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.3.4/ST4-4.3.4.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.17.1/micrometer-commons-1.17.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-core/3.1.5/jackson-core-3.1.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.1/micrometer-core-1.17.1.pom (11 kB at 187 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.3.4/ST4-4.3.4.pom (4.6 kB at 125 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/context-propagation/1.2.1/context-propagation-1.2.1.pom (3.7 kB at 94 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.17.1/micrometer-commons-1.17.1.pom (3.8 kB at 96 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-core/3.1.5/jackson-core-3.1.5.pom (12 kB at 295 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.pom (32 kB at 848 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.pom (13 kB at 333 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.pom (2.9 kB at 77 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-master/3.5.3/antlr-master-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-master/3.5.3/antlr-master-3.5.3.pom (11 kB at 127 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-client-chat/2.0.1/spring-ai-client-chat-2.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-client-chat/2.0.1/spring-ai-client-chat-2.0.1.jar (155 kB at 2.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-model/2.0.1/spring-ai-model-2.0.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/networknt/json-schema-validator/3.0.1/json-schema-validator-3.0.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.38/swagger-annotations-jakarta-2.2.38.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-swagger-2/5.0.0/jsonschema-module-swagger-2-5.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-core/3.8.7/reactor-core-3.8.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-swagger-2/5.0.0/jsonschema-module-swagger-2-5.0.0.jar (19 kB at 520 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/7.0.9/spring-context-7.0.9.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/swagger/core/v3/swagger-annotations-jakarta/2.2.38/swagger-annotations-jakarta-2.2.38.jar (51 kB at 1.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/knuddels/jtokkit/1.1.0/jtokkit-1.1.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/networknt/json-schema-validator/3.0.1/json-schema-validator-3.0.1.jar (580 kB at 1.8 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator/5.0.0/jsonschema-generator-5.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-model/2.0.1/spring-ai-model-2.0.1.jar (429 kB at 1.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-generator/5.0.0/jsonschema-generator-5.0.0.jar (166 kB at 307 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.3.21/kotlin-reflect-2.3.21.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-core/3.8.7/reactor-core-3.8.7.jar (1.9 MB at 2.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-commons/2.0.1/spring-ai-commons-2.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-commons/2.0.1/spring-ai-commons-2.0.1.jar (85 kB at 79 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-template-st/2.0.1/spring-ai-template-st-2.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/knuddels/jtokkit/1.1.0/jtokkit-1.1.0.jar (3.2 MB at 3.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.17.1/micrometer-observation-1.17.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ai/spring-ai-template-st/2.0.1/spring-ai-template-st-2.0.1.jar (8.3 kB at 7.4 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/7.0.9/spring-messaging-7.0.9.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.3.21/kotlin-stdlib-2.3.21.jar (1.8 MB at 1.6 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/7.0.9/spring-context-7.0.9.jar (1.4 MB at 1.2 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-jackson/5.0.0/jsonschema-module-jackson-5.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.17.1/micrometer-observation-1.17.1.jar (84 kB at 73 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.1.5/jackson-databind-3.1.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/victools/jsonschema-module-jackson/5.0.0/jsonschema-module-jackson-5.0.0.jar (35 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/ethlo/time/itu/1.14.0/itu-1.14.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/ethlo/time/itu/1.14.0/itu-1.14.0.jar (58 kB at 45 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.1/antlr4-runtime-4.13.1.jar (326 kB at 255 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar (70 kB at 52 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/7.0.9/spring-aop-7.0.9.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar (12 kB at 8.6 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/7.0.9/spring-beans-7.0.9.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/7.0.9/spring-messaging-7.0.9.jar (614 kB at 453 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/7.0.9/spring-core-7.0.9.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/7.0.9/spring-aop-7.0.9.jar (426 kB at 273 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/7.0.9/spring-expression-7.0.9.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/7.0.9/spring-beans-7.0.9.jar (928 kB at 527 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.2/classmate-1.7.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.3.21/kotlin-reflect-2.3.21.jar (3.6 MB at 2.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-core/3.0.3/jackson-core-3.0.3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/7.0.9/spring-expression-7.0.9.jar (327 kB at 184 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.1/micrometer-core-1.17.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.2/classmate-1.7.2.jar (68 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/context-propagation/1.2.1/context-propagation-1.2.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-core/3.0.3/jackson-core-3.0.3.jar (594 kB at 303 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.3.4/ST4-4.3.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/tools/jackson/core/jackson-databind/3.1.5/jackson-databind-3.1.5.jar (1.9 MB at 983 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.17.1/micrometer-commons-1.17.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/context-propagation/1.2.1/context-propagation-1.2.1.jar (36 kB at 18 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/7.0.9/spring-core-7.0.9.jar (2.0 MB at 1.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.17.1/micrometer-commons-1.17.1.jar (52 kB at 25 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.3.4/ST4-4.3.4.jar (251 kB at 122 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar (74 kB at 35 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.17.1/micrometer-core-1.17.1.jar (915 kB at 435 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar (177 kB at 84 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.3/antlr-runtime-3.5.3.jar (173 kB at 82 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for booking-parent 0.1.0:
+[INFO] 
+[INFO] api-contracts ...................................... SKIPPED
+[INFO] domain ............................................. SKIPPED
+[INFO] booking-parent ..................................... SUCCESS [  4.629 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.960 s
+[INFO] Finished at: 2026-10-10T18:31:43+02:00
+[INFO] ------------------------------------------------------------------------

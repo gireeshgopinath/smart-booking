@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "provider": "lmstudio",
+  "localModels": [
+    "qwen3.8-27b",
+    "qwen3.8-flash-next"
+  ],
+  "reviewModel": null,
+  "allowGptFailover": true,
+  "manageLocalServices": true,
+  "installPrerequisites": true,
+  "localContextLength": 32768,
+  "localParallel": 1,
+  "modelBusyWaitSeconds": 30,
+  "localTrialTimeoutSeconds": 180,
+  "invocationTimeoutSeconds": 900,
+  "verificationTimeoutSeconds": 900,
+  "maxSessionsPerTask": 24,
+  "maxProviderRetries": 2,
+  "maxRunHours": 24,
+  "windowsSandbox": "mxc",
+  "ownerAcceptancePath": "docs/execution/owner-acceptance.json",
+  "executionMode": "manual"
+}

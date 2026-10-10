@@ -1,0 +1,14 @@
+Actual observed startup lines:
+model: qwen3.8-flash-next
+provider: lmstudio
+sandbox: read-only
+reasoning effort: none
+Model metadata not found; defaulting to fallback metadata.
+
+Actual LM Studio status during trial:
+qwen3.8-flash-next PROCESSINGPROMPT 75.44 GB 262144 context 4 parallel
+
+No tool events or final message were observed before terminating only the trial codex.exe.
+Post-stop LM Studio status: IDLE.
+Independent fixture test afterward: exit 1; unchanged function returned 8 instead of expected 5.
+MXC one-command probe: MXC_OK, exit 0.

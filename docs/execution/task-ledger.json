@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0",
+  "updatedAt": "2026-10-10T17:36:44.7502213Z",
+  "scope": "Application development, not startup-pack authoring",
+  "tasks": [
+    {
+      "id": "T01",
+      "status": "IN_PROGRESS",
+      "attempts": 3,
+      "reviewStatus": "PENDING",
+      "evidence": [
+        "docs/verification/T01/session-001/supervisor-preflight.json"
+      ],
+      "revision": null,
+      "notes": "Operator selected this interactive implementation session; no fixed implementation deadline or structured-final requirement."
+    },
+    {
+      "id": "T02",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T03",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T04",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T05",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T06",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T07",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T08",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T09",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T10",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T11",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T12",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T13",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T14",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T15",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T16",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T17",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T18",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T19",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T20",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T21",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T22",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T23",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T24",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T25",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T26",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T27",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T28",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T29",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T30",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T31",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T32",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T33",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T34",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T35",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T36",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T37",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T38",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T39",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T40",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T41",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    },
+    {
+      "id": "T42",
+      "status": "TODO",
+      "attempts": 0,
+      "reviewStatus": "PENDING",
+      "evidence": [],
+      "revision": null,
+      "notes": "Not implemented. Preparation documents do not satisfy task acceptance."
+    }
+  ]
+}

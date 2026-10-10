@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-10-10T10:30:09.163059+00:00",
+  "scope": "Startup preparation only",
+  "valid": true,
+  "checks": [
+    {
+      "check": "original source hashes",
+      "count": 3,
+      "result": "PASS"
+    },
+    {
+      "check": "application ledger unchanged and complete",
+      "count": 42,
+      "result": "PASS",
+      "applicationImplemented": false
+    },
+    {
+      "check": "authored local Markdown links",
+      "count": 493,
+      "result": "PASS"
+    },
+    {
+      "check": "contract and example JSON parse",
+      "count": 5,
+      "result": "PASS"
+    },
+    {
+      "check": "release gate coverage",
+      "backend": 26,
+      "application": 20,
+      "separateHandoff": "H01",
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

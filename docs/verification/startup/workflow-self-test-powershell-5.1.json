@@ -1,0 +1,62 @@
+{
+    "valid":  true,
+    "powershell":  "5.1.26100.9444",
+    "fixtureDirectory":  "C:\\Users\\giree\\OneDrive\\Desktop\\booking\\docs\\execution\\runs\\workflow-self-test-20261010T103317400Z-25099974",
+    "checks":  [
+                   {
+                       "check":  "dependency-ready dry run",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "unmet dependency rejection",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "graph/schema/scripts verification",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "string-leaf sanitization and parseable JSON",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "bounded mock CLI/stdin/result/review packet",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "existing output overwrite rejection",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "implementer PASS rejection",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "nonzero CLI exit capture and rejection",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "rejected/missing-result diagnostic preserves exit and redacts log",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "diagnostic approval rejection",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "owned process deadline/termination",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "timed-out diagnostic preserves timeout state",
+                       "result":  "PASS"
+                   },
+                   {
+                       "check":  "Markdown ledger mutation rejection",
+                       "result":  "PASS"
+                   }
+               ],
+    "liveModel":  "NOT_RUN",
+    "applicationTests":  "NOT_RUN",
+    "ledgerPromoted":  false
+}

@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "taskId": "T01",
+  "sessionId": "T01-S01",
+  "phase": "SUPERVISOR_PREPARATION",
+  "preparedAtUtc": "2026-10-10T15:12:25.3706867Z",
+  "localModelExecution": "NOT_LAUNCHED",
+  "acceptanceReview": "PENDING",
+  "dependencyReady": true,
+  "localExecutionReady": false,
+  "doctor": {
+    "command": ".\\scripts\\agent-doctor.ps1",
+    "result": {
+      "readOnly": true,
+      "observedAtUtc": "2026-10-10T15:12:24.6994696Z",
+      "powershell": "7.6.5",
+      "checks": [
+        {
+          "name": "codex",
+          "state": "FOUND",
+          "path": "C:\\Users\\giree\\AppData\\Roaming\\npm\\codex.ps1"
+        },
+        {
+          "name": "git",
+          "state": "FOUND",
+          "path": "C:\\Program Files\\Git\\cmd\\git.exe"
+        },
+        {
+          "name": "java",
+          "state": "MISSING",
+          "path": null
+        },
+        {
+          "name": "docker",
+          "state": "FOUND",
+          "path": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+        },
+        {
+          "name": "ollama",
+          "state": "FOUND",
+          "path": "C:\\Users\\giree\\AppData\\Local\\Programs\\Ollama\\ollama.exe"
+        },
+        {
+          "name": "codex-flags",
+          "state": "OK",
+          "detail": "codex-cli 0.162.1"
+        },
+        {
+          "name": "docker-engine",
+          "state": "RUNNING",
+          "detail": "29.8.0"
+        },
+        {
+          "name": "ollama",
+          "state": "UNREACHABLE_OR_OVERRIDE",
+          "detail": "No connection could be made because the target machine actively refused it. (127.0.0.1:11434)"
+        },
+        {
+          "name": "lmstudio",
+          "state": "REACHABLE",
+          "detail": {
+            "provider": "lmstudio",
+            "inventoryEndpoint": "http://127.0.0.1:1234/v1/models",
+            "models": [
+              "qwen3.8-flash-next",
+              "qwen3.8-27b",
+              "text-embedding-nomic-embed-text-v1.5"
+            ],
+            "toolCompatibility": "NOT_VERIFIED"
+          }
+        },
+        {
+          "name": "workflow",
+          "state": "FOUND",
+          "tasks": 42,
+          "ledgerTasks": 42
+        }
+      ],
+      "nextStep": "Choose an exact installed model ID. Reachability is not a tool-use compatibility test. Install JDK/start Docker before runtime-dependent tasks. No packages, models, services, or configuration were changed."
+    },
+    "scope": "Inventory, not an application health or acceptance test"
+  },
+  "git": {
+    "command": "git status --short",
+    "exitCode": 128,
+    "output": "fatal: not a git repository (or any of the parent directories): .git\r\n",
+    "interpretation": "No workspace Git repository; use an explicit source fingerprint, not an invented commit."
+  },
+  "loadedModels": {
+    "command": "lms ps",
+    "observedAtUtc": "2026-10-10T15:12:25.3708293Z",
+    "exitCode": 0,
+    "output": "\r\nIDENTIFIER            MODEL                 STATUS        SIZE        CONTEXT    PARALLEL    DEVICE    TTL\r\nqwen3.8-flash-next    qwen3.8-flash-next    GENERATING    75.44 GB    262144     4           Local        \r\n\r\n"
+  },
+  "toolchain": {
+    "javaOnPath": false,
+    "mavenOnPath": false,
+    "javaHomeSet": false,
+    "javaVersion": "NOT_RUN",
+    "cleanWrapperVerify": "NOT_RUN",
+    "note": "Java PATH/JAVA_HOME availability is unresolved in this terminal. Earlier formatter evidence does not establish this terminal toolchain or a clean build."
+  },
+  "localAdmission": {
+    "status": "NOT_VERIFIED",
+    "evidencePath": "docs/verification/startup/local-model-trial.json",
+    "note": "Prior bounded trial timed out. Endpoint availability does not establish file/edit/test/structured-output capability."
+  },
+  "declaredScaffold": {
+    "status": "PRESENT_UNREVIEWED",
+    "java": "25",
+    "springBoot": "4.1.1",
+    "springAi": "2.0.1",
+    "maven": "3.10.0",
+    "wrapperChecksumDeclared": true,
+    "officialCompatibilityVerified": false,
+    "distributionChecksumIndependentlyVerified": false,
+    "existingEvidence": "docs/verification/T01/spotless-apply.log",
+    "existingEvidenceScope": "Formatting only; no clean verify acceptance",
+    "stagingPointer": ".t01-stage-path.txt",
+    "stagingPointerScope": "Preserve as existing metadata; do not modify or follow for execution in this session"
+  },
+  "originalSourcePreservation": [
+    {
+      "path": "Booking_Application_Master_Execution_Plan.md",
+      "expectedSha256": "b44eb6715ddad112056b3c5b3710f6e99bcbb3743211b3e8d234851ae525e258",
+      "observedSha256": "b44eb6715ddad112056b3c5b3710f6e99bcbb3743211b3e8d234851ae525e258",
+      "preserved": true
+    },
+    {
+      "path": "Booking_Backend_Local_Agent_Execution_Plan.md",
+      "expectedSha256": "28e9b5addbb66fad2f68dcd94714160f88d404fcfbb49a2b15683fd476b92956",
+      "observedSha256": "28e9b5addbb66fad2f68dcd94714160f88d404fcfbb49a2b15683fd476b92956",
+      "preserved": true
+    },
+    {
+      "path": "Booking_Application_Design_and_Development.docx",
+      "expectedSha256": "a01d73e5a28ec5840a2ee81830fc83f829cd118fe9826a71de2d01c4da2385dc",
+      "observedSha256": "a01d73e5a28ec5840a2ee81830fc83f829cd118fe9826a71de2d01c4da2385dc",
+      "preserved": true
+    }
+  ],
+  "protectedContractHashes": [
+    {
+      "path": "docs/features/T01.md",
+      "sha256": "8db83dab3eee83c5bd1ee38b28e24266344918fa02e512e79f9d84e220c36d1f"
+    },
+    {
+      "path": "contracts/tasks.json",
+      "sha256": "cf38e3d30a3b8dcb816b1494aa4ec0998e500ddc8aacc1932fa175656e412b2e"
+    },
+    {
+      "path": "docs/prompts/SUPERVISOR.md",
+      "sha256": "dfd33125c37d07eb3ef595e0b687031618b93166c52fb24df88b98d9d61fcacd"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "a57ebd06609f0fda900c4fb875b45b9e31eb9217c6f674f9028f20a731191e54"
+    }
+  ],
+  "sourceRevisionAtPreparation": "snapshot:bdde82aa6006ee0f1bd53c2dd4866cf6610f2d700e408392b7a811cb705f9369",
+  "sourceSnapshotPath": "docs/verification/T01/session-001/source-at-preparation.json",
+  "gates": [
+    "Keep model execution closed until a successful bounded coding/structured-output/continuation admission trial is reviewed.",
+    "Confirm no other implementation writer is operating in this workspace before launching a local session.",
+    "Identify and verify the actual JDK25 before the later build session; this inventory-only slice may document it as unavailable.",
+    "Recheck live model state and source changes immediately before a future launch."
+  ],
+  "limitation": "This records supervisor preparation and current prerequisites. It is not local-model execution, a clean build, or T01 acceptance."
+}

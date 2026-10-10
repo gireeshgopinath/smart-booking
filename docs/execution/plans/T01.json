@@ -1,0 +1,93 @@
+{
+  "taskId": "T01",
+  "goal": "Establish and independently verify the complete T01 repository and dependency baseline, preserving existing unreviewed work. Inventory alone cannot accept T01. This planning session makes no code or progress changes; T02 remains unavailable until all four original criteria pass and the separate GPT reviewer approves the tested source.",
+  "allowedPaths": [
+    ".editorconfig",
+    ".gitignore",
+    ".mvn/",
+    "mvnw",
+    "mvnw.cmd",
+    "pom.xml",
+    "modules/api-contracts/",
+    "modules/domain/",
+    "docs/adr/T01-toolchain-baseline.md",
+    "docs/execution/dependency-manifest.json",
+    "docs/execution/repository-assessment.md",
+    "docs/execution/review-packets/T01.md",
+    "docs/verification/T01/",
+    "scripts/verify/verify-T01-inventory.ps1",
+    "scripts/verify/verify-T01-compatibility.ps1",
+    "scripts/verify/verify-T01.ps1",
+    "scripts/verify/verify-T01-secrets.ps1"
+  ],
+  "steps": [
+    "Execution boundaries: use sequential bounded sessions with one implementation writer, within the controller's configured deadlines. Use admitted LM Studio implementation or the already-authorized GPT failover; retain a separate read-only GPT reviewer. Do not edit controller/protocol scripts, workflow configuration or schemas, source plans, feature packets, either ledger, next-step.md, or human acceptance records. Keep the existing workspace root. Each session reports changed paths, exact commands, actual exits, UTC timestamps, tested revision or explicit no-Git fingerprint, evidence and limitations. Implementers return NEEDS_REVIEW, FAILED or BLOCKED; they cannot accept the parent task.",
+    "T01-S01 — Reconcile and preserve the starting state. Recheck Git status, tools, relevant services and ports without exposing credentials or disturbing active model work. Current observations are Git exit 128 with no repository, Temurin 25.0.4.1+1 and javac available, standalone Maven absent, and Docker access denied in this execution environment. All three supplied document hashes currently match docs/sources/source-manifest.json. Preserve the unreviewed POMs, wrappers, Java files, historical logs, staging-pointer metadata and preparation records. Do not follow or reuse external staging pointers. Append a dated assessment while retaining its historical section.",
+    "T01-S01 verification — Implement verify-T01-inventory.ps1 with a parameter-free default invocation from the workspace. Generate actual inventory, tool diagnostics, source-preservation and reconciliation reports. Enumerate supplied documents, preparation artifacts, unreviewed scaffold and generated outputs distinctly. Parse Master T01–T42 and backend T01–T26 identifiers, compare them with task index and packets, and read DOCX paragraphs/tables directly from OOXML. Reconcile missing referenced support documents with explicitly labelled adopted replacements; do not claim reconstructed material was supplied. Compare original bytes/SHA-256 with the immutable source manifest and unrelated files with controller-captured starting snapshots. Record real Git absence and a reproducible source fingerprint instead of creating a Git repository or inventing a commit.",
+    "T01-S02 — Ratify the pinned compatible baseline in dependency-manifest.json and the baseline ADR: Java feature/release target 25 using observed Temurin 25.0.4.1+1, Maven 3.10.0, wrapper 3.3.4, Spring Boot 4.1.1 and Spring AI 2.0.1. Primary documentation supports Java 25 and Maven 3.10.0 for Boot 4.1.1, and AI 2.0.x supports Boot 4.0.x/4.1.x. Record lookup UTC, exact vendor/build identifiers, artifact coordinates, immutable release references and rationale. Sources: [Boot requirements](https://docs.spring.io/spring-boot/system-requirements.html), [Boot 4.1.1 release](https://spring.io/blog/2026/08/20/spring-boot-4-1-1-available-now/), [Spring AI compatibility](https://docs.spring.io/spring-ai/reference/getting-started.html), [AI 2.0.1 release](https://spring.io/blog/2026/08/21/spring-ai-2-0-1-available-now/), [Maven releases](https://maven.apache.org/download.cgi), [Wrapper releases](https://maven.apache.org/tools/wrapper/download.cgi), [Temurin release](https://github.com/adoptium/temurin25-binaries/releases/tag/jdk-25.0.4.1%2B1).",
+    "T01-S02 verification — Implement verify-T01-compatibility.ps1. Independently retrieve supporting official documentation and selected release metadata, recording response outcomes and content hashes. Download the exact configured Apache Maven 3.10.0 ZIP, verify its bytes against Apache's matching SHA-512 sidecar, compute SHA-256 from those verified bytes, and compare it with distributionSha256Sum. Treat the existing checksum as untrusted until this succeeds. Validate wrapper provenance against official 3.3.4 files and check actual java/javac vendor, build and versions against the manifest. Validate all active dependency/plugin declarations and repositories; reject dynamic versions, snapshots, previews and latest placeholders. Missing official evidence, failed downloads or mismatches exit nonzero. Do not install tools or change machine settings from child sessions.",
+    "T01-S03 — Complete the minimal build scaffold through targeted changes to existing files. Retain the root aggregator and build-only domain/api-contracts modules. Keep domain independent of Spring, persistence and providers. Pin and validate lifecycle, compiler, Surefire, formatting, enforcement, dependency-report and effective-POM plugins. Bind real compilation, tests and formatting checks to the normal verify lifecycle; reject hidden skip flags and swallowed failures. Reuse useful existing tests, but assess their actual coverage. Add test-scoped Boot/Spring AI dependencies in api-contracts to prove compatibility through a provider-free non-web Boot context and actual BeanOutputConverter schema generation, valid JSON conversion and malformed JSON rejection. Verify executing JDK, compiled class-file target and resolved artifact versions. These are library compatibility tests, with no inference or booking-runtime success claim. Reference: [Spring AI converter documentation](https://docs.spring.io/spring-ai/reference/api/structured-output/converters.html).",
+    "T01-S04 — Implement scripts/verify/verify-T01.ps1 as the meaningful Windows clean-build and failure-propagation entrypoint. Its default invocation requires no arguments and runs real subprocesses. Create a unique source-only staging copy under docs/verification/T01/, resolving and checking every destination remains inside that owned directory. Reject reparse points and preexisting stage/cache directories; exclude target outputs, credentials, global caches and external staging pointers. Hash every staged input and compare it with current source. Select the manifest JDK process-locally and use fresh Maven distribution/dependency caches with controlled credential-free settings. Run actual mvnw.cmd --version and mvnw.cmd -B -ntp -V clean verify, specifying the fresh repository as a separate argument. Run effective-POM and dependency-tree goals through explicitly pinned plugins. Preserve complete sanitized transcripts, process exits, test results, artifact metadata and source fingerprint.",
+    "T01-S04 failure checks — Use separate owned copies of the successfully built source to introduce a real Java compilation error, a failing JUnit assertion and a formatting violation. Invoke the actual wrapper/check entrypoints and require nonzero subprocess exits with the expected corresponding diagnostics; unrelated download failures do not satisfy these controls. In another isolated copy with an empty wrapper cache, alter only the expected distribution checksum and require bootstrap to reject the genuine distribution. Exercise verifier failure reporting with these real failures so an unexpected zero exit fails the parent check. Restore no workspace files because mutations occur only in owned staging copies. Never replace tools or commands with success/failure stubs.",
+    "T01-S05 — Implement verify-T01-secrets.ps1. Scan the manifest, complete fresh build/evidence transcripts, examples, candidate versionable source and available Git index/history using a documented rule set. If Git metadata remains absent, record that observation explicitly and scan the complete versionable worktree/examples; do not claim nonexistent history was scanned. Cover credential assignments, private keys, authenticated URLs, bearer/provider tokens and guest capabilities. Validate scanner detection with harmless positive/negative canaries, including a disposable Git fixture when exercising history scanning. Output only rule identifiers, locations and sanitized findings. Any finding or scan error fails verification. Keep unresolved tool diagnostics with their actual failed or unavailable probes.",
+    "T01-S06 — Finalize the assessment and criterion coverage packet, then let the controller independently execute the four verification scripts in the listed order against the final candidate. Each script writes fresh nonempty files at its declared docs/verification/T01/independent/ paths, archives prior verifier-owned outputs under unique run directories, and records its run ID, UTC times, exact commands, actual exits, environment and current source fingerprint. Historical session-001 evidence and logs remain intact. Missing/stale evidence, source changes during verification, mandatory failures or mandatory NOT_RUN results produce a nonzero verifier exit. Verification scripts modify only T01 evidence and owned staging fixtures.",
+    "Parent review and recovery — The independent GPT reviewer inspects the actual source/patch, official-source captures, checksum proof, executed test reports, negative controls, secret scan and write-boundary audit. Approval applies only to the matching tested source and evidence. After two repairs for one root cause, preserve a minimal reproduction and actual diagnostics in docs/execution/review-packets/T01.md for focused GPT diagnosis; do not downgrade versions or weaken checks. Only the controller may subsequently record PASS/APPROVED, synchronize progress and advance to T02."
+  ],
+  "verificationScripts": [
+    "scripts/verify/verify-T01-inventory.ps1",
+    "scripts/verify/verify-T01-compatibility.ps1",
+    "scripts/verify/verify-T01.ps1",
+    "scripts/verify/verify-T01-secrets.ps1"
+  ],
+  "acceptanceMapping": [
+    {
+      "criterion": "Inventory reconciles with the three supplied design files and any artifacts created by this preparation; existing source documents remain intact.",
+      "evidenceExpected": [
+        "docs/verification/T01/independent/inventory.json",
+        "docs/verification/T01/independent/reconciliation.json",
+        "docs/verification/T01/independent/source-preservation.json",
+        "docs/verification/T01/independent/boundary-audit.json"
+      ]
+    },
+    {
+      "criterion": "Selected Java, Maven, Spring Boot and Spring AI versions have compatible official-source evidence and wrapper distribution checksum; no latest/snapshot placeholder remains.",
+      "evidenceExpected": [
+        "docs/verification/T01/independent/official-source-fetches.json",
+        "docs/verification/T01/independent/compatibility.json",
+        "docs/verification/T01/independent/jdk-version.json",
+        "docs/verification/T01/independent/maven-distribution-checksum.json",
+        "docs/verification/T01/independent/resolved-versions.json"
+      ]
+    },
+    {
+      "criterion": "Clean wrapper verify exits 0 and resolves dependencies with the pinned environment; shared checks do not succeed by swallowing failures.",
+      "evidenceExpected": [
+        "docs/verification/T01/independent/stage-inputs.json",
+        "docs/verification/T01/independent/wrapper-version.log",
+        "docs/verification/T01/independent/clean-verify.log",
+        "docs/verification/T01/independent/clean-verify.json",
+        "docs/verification/T01/independent/effective-pom.xml",
+        "docs/verification/T01/independent/dependency-tree.txt",
+        "docs/verification/T01/independent/test-results.json",
+        "docs/verification/T01/independent/failure-propagation.json"
+      ]
+    },
+    {
+      "criterion": "Secrets are absent from manifest, build transcript, tracked examples and version control; unresolved tools are recorded with diagnostics.",
+      "evidenceExpected": [
+        "docs/verification/T01/independent/secret-scan.json",
+        "docs/verification/T01/independent/secret-scan-controls.json",
+        "docs/verification/T01/independent/git-secret-scan.json",
+        "docs/verification/T01/independent/tool-diagnostics.json"
+      ]
+    }
+  ],
+  "externalGates": [
+    "T01 has no live-account or inference prerequisite. Official compatibility evidence, distribution verification and real clean dependency resolution/build are mandatory. Network/DNS failures remain blocking local prerequisites with nonzero verification; they cannot be excused as external NOT_RUN.",
+    "Product live local-model V16 and dedicated external calendar/production SMTP accounts retain separately permitted NOT_RUN labels when unavailable. Development-model admission or GPT implementation failover does not satisfy product live inference.",
+    "Dependency startup, PostgreSQL migrations, Compose and dedicated kind behavior belong to their later tasks and remain mandatory local gates there. T01 records actual tool limitations without claiming those environments passed.",
+    "T26 verifies T01–T25 and backend scope. T41 verifies full-application mandatory gates against final source; T01 or T26 acceptance cannot substitute for that final verification.",
+    "T30 retains actual manual keyboard and screen-reader evidence. Automated checks cannot manufacture tester acceptance. T42/H01 requires actual owner acceptance of the inspected final handoff; development authorization does not supply it.",
+    "Paid cloud deployment, public publication, real-customer communications, representative scale and live P3 media/provider experiments remain explicit separate gates. Prepare reviewable assets in their assigned tasks; template validation, fixtures and local measurements do not establish these outcomes."
+  ]
+}

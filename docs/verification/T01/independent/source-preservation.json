@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "taskId": "T01",
+  "slice": "S01",
+  "runId": "inventory-20261010T160924955Z-5de0b316",
+  "startedAtUtc": "2026-10-10T16:09:24.9524154Z",
+  "finishedAtUtc": "2026-10-10T16:10:29.2509935Z",
+  "command": "pwsh -NoProfile -File scripts/verify/verify-T01-inventory.ps1",
+  "sourceFingerprint": "no-git-sha256:f3dd2a88409a943c9255cc278b64dd77e0ce7ad8e1067a24698342265e0364d4",
+  "environment": {
+    "powershell": "7.6.5",
+    "os": "Microsoft Windows 10.0.26200",
+    "workspace": "C:\\Users\\giree\\OneDrive\\Desktop\\booking"
+  },
+  "data": {
+    "manifest": "docs/sources/source-manifest.json",
+    "manifestSha256": "de8dc807158c29d5d517c9c967cbe78847b7291707e2a8051befba5a76313f35",
+    "suppliedDocuments": [
+      {
+        "path": "Booking_Application_Master_Execution_Plan.md",
+        "expectedBytes": 46266,
+        "actualBytes": 46266,
+        "expectedSha256": "b44eb6715ddad112056b3c5b3710f6e99bcbb3743211b3e8d234851ae525e258",
+        "actualSha256": "b44eb6715ddad112056b3c5b3710f6e99bcbb3743211b3e8d234851ae525e258",
+        "matches": true
+      },
+      {
+        "path": "Booking_Backend_Local_Agent_Execution_Plan.md",
+        "expectedBytes": 60738,
+        "actualBytes": 60738,
+        "expectedSha256": "28e9b5addbb66fad2f68dcd94714160f88d404fcfbb49a2b15683fd476b92956",
+        "actualSha256": "28e9b5addbb66fad2f68dcd94714160f88d404fcfbb49a2b15683fd476b92956",
+        "matches": true
+      },
+      {
+        "path": "Booking_Application_Design_and_Development.docx",
+        "expectedBytes": 50750,
+        "actualBytes": 50750,
+        "expectedSha256": "a01d73e5a28ec5840a2ee81830fc83f829cd118fe9826a71de2d01c4da2385dc",
+        "actualSha256": "a01d73e5a28ec5840a2ee81830fc83f829cd118fe9826a71de2d01c4da2385dc",
+        "matches": true
+      }
+    ],
+    "allMatch": true
+  }
+}
