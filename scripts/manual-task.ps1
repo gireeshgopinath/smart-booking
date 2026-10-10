@@ -8,6 +8,7 @@ param(
     [ValidateSet('gpt','lmstudio')][string]$Provider='lmstudio',
     [string]$Model,
     [string]$CodexCommand='codex',
+    [ValidateRange(60,86400)][int]$SupervisorTimeoutSeconds=7200,
     [switch]$Execute,
     [switch]$ExclusiveWriterConfirmed
 )
@@ -62,7 +63,7 @@ try {
         $criteria=Get-AutomationTaskCriteria $Root $context.Task
         $paths=Get-AutomationTaskPaths $Root $context.Task
         $prompt="Read docs/prompts/SUPERVISOR.md, AGENTS.md and $($context.Task.specPath). Produce one complete task plan for $TaskId. Preserve these exact acceptance criteria: $($criteria | ConvertTo-Json -Compress). Allowed paths must be a subset of: $($paths | ConvertTo-Json -Compress). Use concrete verification scripts and criterion-specific fresh evidence paths. Retain all human/external gates. Split implementation into coherent slices but request review only after the whole task verifies or a repeated failure needs diagnosis. Read actual source and ledger. Do not edit any files."
-        $run=Invoke-AutomationAgent -Root $Root -Role Plan -Prompt $prompt -SchemaPath (Join-Path $Root 'contracts/automation-plan.schema.json') -RunDirectory $directory -MaxRunSeconds 1800 -WindowsSandbox $config.windowsSandbox -CodexCommand $CodexCommand -ReadOnly
+        $run=Invoke-AutomationAgent -Root $Root -Role Plan -Prompt $prompt -SchemaPath (Join-Path $Root 'contracts/automation-plan.schema.json') -RunDirectory $directory -MaxRunSeconds $SupervisorTimeoutSeconds -WindowsSandbox $config.windowsSandbox -CodexCommand $CodexCommand -ReadOnly
         if (-not $run.valid) {throw ($run.issues -join '; ')}
         Assert-AutomationPlan $Root $context.Task $run.result
         $destination=Resolve-AutomationPath $Root ('docs/execution/runs/manual-plans/'+$TaskId+'.json')
@@ -93,7 +94,7 @@ Perform sequential coherent slices until all planned behavior and checks are imp
             if (-not (@($inventory.models) -ccontains $Model)) {throw 'Model is not served by LM Studio; no automatic switch or download was attempted.'}
             $arguments+=@('--oss','--local-provider','lmstudio','--model',$Model)
         } else {
-            $arguments+=@('--config','model_provider="openai"','--search')
+            $arguments+=@(Get-HostedCodexStreamArguments)+@('--search')
             if ($Model) {$arguments+=@('--model',$Model)}
         }
         $before=Get-SourceSnapshot $Root
@@ -124,7 +125,7 @@ Perform sequential coherent slices until all planned behavior and checks are imp
     $snapshot=Get-SourceSnapshot $Root
     $hashes=Get-AutomationEvidenceHashes $Root $verification.evidencePaths
     $reviewPrompt="Read docs/prompts/SUPERVISOR.md, $($context.Task.specPath), $(Get-AutomationRelativePath $Root (Join-Path $directory 'plan.json')) and $($verification.reportPath). Inspect actual source and all criterion evidence independently. Review complete task $TaskId, exact source revision $($snapshot.revision). Return APPROVE only if every original criterion is met and no material finding remains; otherwise REQUEST_CHANGES or BLOCKED. Do not edit any files. This is the single complete-task review, not a per-slice review."
-    $review=Invoke-AutomationAgent -Root $Root -Role Review -Model $config.reviewModel -Prompt $reviewPrompt -SchemaPath (Join-Path $Root 'contracts/automation-review.schema.json') -RunDirectory (Join-Path $directory 'review') -MaxRunSeconds 1800 -WindowsSandbox $config.windowsSandbox -CodexCommand $CodexCommand -ReadOnly
+    $review=Invoke-AutomationAgent -Root $Root -Role Review -Model $config.reviewModel -Prompt $reviewPrompt -SchemaPath (Join-Path $Root 'contracts/automation-review.schema.json') -RunDirectory (Join-Path $directory 'review') -MaxRunSeconds $SupervisorTimeoutSeconds -WindowsSandbox $config.windowsSandbox -CodexCommand $CodexCommand -ReadOnly
     if (-not $review.valid) {throw ('GPT review failed; verified work is preserved: '+($review.issues -join '; '))}
     Assert-AutomationEvidenceHashes $Root $hashes
     Assert-AutomationApproval $Root $context.Task $plan $verification $review.result $snapshot.revision

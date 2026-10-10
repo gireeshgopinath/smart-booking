@@ -28,7 +28,7 @@ $schema = Resolve-WorkspacePath $Root $(if ($Role -eq 'Local') {'contracts/local
 $sandbox = if ($Role -eq 'Local') {'workspace-write'} else {'read-only'}
 $baseArgs = @('exec','--model',$Model,'--sandbox',$sandbox,'--cd',[IO.Path]::GetFullPath($Root),'--skip-git-repo-check','--ephemeral','--output-schema',$schema,'--color','never')
 if ($Role -eq 'Local') { $baseArgs += @('--oss','--local-provider',$Provider) }
-else { $baseArgs += @('--config','model_provider="openai"') }
+else { $baseArgs += @(Get-HostedCodexStreamArguments) }
 if ($WindowsSandbox) { $baseArgs += @('--config',('windows.sandbox="' + $WindowsSandbox + '"')) }
 if (-not $Execute) {
     [pscustomobject]@{ taskId=$TaskId; role=$Role; dryRun=$true; model=$Model; provider=$Provider; sandbox=$sandbox; maxRunSeconds=$MaxRunSeconds; arguments=$baseArgs + @('--output-last-message','<new-run-folder>/result.json','-'); promptCharacters=$prompt.Length; executionRequires='Explicit -Execute; supported CLI flags; working Windows sandbox; local endpoint exact model inventory for Local; unchanged revision for Review'; writesFiles=$false; ledgerChanged=$false } | ConvertTo-Json -Depth 10

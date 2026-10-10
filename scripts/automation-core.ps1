@@ -144,7 +144,7 @@ function Invoke-AutomationAgent {
         $inventory = Get-LocalModelInventory $Provider
         if (-not (@($inventory.models) -ccontains $Model)) { throw 'Requested local model is not served; no model download is permitted.' }
         $arguments += @('--oss','--local-provider',$Provider)
-    } else { $arguments += @('--config','model_provider="openai"','--config','web_search="live"') }
+    } else { $arguments += @(Get-HostedCodexStreamArguments)+@('--config','web_search="live"') }
     if ($WindowsSandbox) { $arguments += @('--config',('windows.sandbox="' + $WindowsSandbox + '"')) }
     $arguments += '-'
     Write-NewUtf8 (Join-Path $RunDirectory 'prompt.txt') $Prompt

@@ -111,10 +111,10 @@ $received=Read-WorkflowJson (Join-Path $case.directory 'received.json')
 $modelIndex=[Array]::IndexOf(@($received.arguments),'--model')
 $sandboxIndex=[Array]::IndexOf(@($received.arguments),'--sandbox')
 Assert-CoreTest ($case.result.valid -and $case.result.result.taskId -eq 'T00') 'agent actual child transport accepts schema-valid structured result'
-Assert-CoreTest ($modelIndex -ge 0 -and $received.arguments[$modelIndex+1] -ceq 'mock-valid space "quoted"' -and $sandboxIndex -ge 0 -and $received.arguments[$sandboxIndex+1] -eq 'workspace-write' -and $received.prompt.TrimEnd() -ceq $case.prompt.TrimEnd() -and @($received.arguments) -contains 'model_provider="openai"') 'agent preserves model argument, stdin and explicit provider/sandbox configuration'
+Assert-CoreTest ($modelIndex -ge 0 -and $received.arguments[$modelIndex+1] -ceq 'mock-valid space "quoted"' -and $sandboxIndex -ge 0 -and $received.arguments[$sandboxIndex+1] -eq 'workspace-write' -and $received.prompt.TrimEnd() -ceq $case.prompt.TrimEnd() -and @($received.arguments) -contains 'model_provider="booking-long-running"' -and @($received.arguments) -contains 'model_providers.booking-long-running.stream_idle_timeout_ms=1800000' -and @($received.arguments) -contains 'model_providers.booking-long-running.stream_max_retries=10' -and @($received.arguments) -contains 'model_providers.booking-long-running.requires_openai_auth=true') 'agent preserves model/stdin and passes longer stream limits with signed-in OpenAI authentication'
 $case=Invoke-CoreMockAgent 'configured cloud default' ''
 $received=Read-WorkflowJson (Join-Path $case.directory 'received.json')
-Assert-CoreTest ($case.result.valid -and @($received.arguments) -notcontains '--model' -and @($received.arguments) -contains 'model_provider="openai"') 'cloud default omits invented model ID and forces configured OpenAI provider'
+Assert-CoreTest ($case.result.valid -and @($received.arguments) -notcontains '--model' -and @($received.arguments) -contains 'model_provider="booking-long-running"') 'cloud default omits invented model ID and selects the tuned OpenAI provider'
 foreach ($mode in @('mock-nonzero','mock-missing-result','mock-malformed-json','mock-invalid-enum','mock-extra-property','mock-invalid-type')) {
     $case=Invoke-CoreMockAgent $mode $mode
     Assert-CoreTest (-not $case.result.valid -and $case.result.issues.Count -gt 0 -and (Test-Path -LiteralPath $case.result.runSummaryPath)) ('agent rejects ' + $mode + ' and preserves summary')

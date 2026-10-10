@@ -1,5 +1,19 @@
 Set-StrictMode -Version 2.0
 
+function Get-HostedCodexStreamArguments {
+    # Built-in provider IDs cannot be overridden in Codex 0.162.1.
+    # Keep the normal OpenAI endpoint and ChatGPT authentication; tune a custom ID.
+    return @(
+        '--config','model_provider="booking-long-running"',
+        '--config','model_providers.booking-long-running.name="OpenAI"',
+        '--config','model_providers.booking-long-running.wire_api="responses"',
+        '--config','model_providers.booking-long-running.requires_openai_auth=true',
+        '--config','model_providers.booking-long-running.supports_websockets=true',
+        '--config','model_providers.booking-long-running.stream_idle_timeout_ms=1800000',
+        '--config','model_providers.booking-long-running.stream_max_retries=10'
+    )
+}
+
 function Resolve-WorkspacePath {
     param([string]$Root, [string]$RelativePath, [switch]$MustExist)
     $rootPath = [IO.Path]::GetFullPath($Root).TrimEnd([char[]]'\/')
